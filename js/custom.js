@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
 
-
 	// fullpage plugin initialization
 	$('#fullpage').fullpage({
 		anchors: ['firstPage', 'secondPage', 'thirdPage', '4thPage', '5thPage'],
@@ -10,6 +9,8 @@ $(document).ready(function () {
 		fitToSection: false,//行動裝置上這個不理想所以打false
 		scrollingSpeed: 1200
 	});
+
+	//owl-carousel
 	$("#myCarousel .owl-carousel").owlCarousel({
 		items: 1,
 		loop: true,
@@ -38,7 +39,13 @@ $(document).ready(function () {
 		mouseDrag: true,
 		touchDrag: true
 	});
+	if ($(window).width() < 576) {
+		$("#myCarousel2 .owl-carousel").owlCarousel({
+			items: 2,
+		});
+	}
 
+	//手機popupmenu下滑時 消失
 	$(window).on('scroll', function () {
 		var scrollDistance = $(window).scrollTop();
 		var $overlay = $("#overlay");
@@ -48,11 +55,6 @@ $(document).ready(function () {
 
 	})
 
-	if ($(window).width() < 576) {
-		$("#myCarousel2 .owl-carousel").owlCarousel({
-			items: 2,
-		});
-	}
 
 	$(function () {
 		var $container = $('.masonry');
@@ -64,34 +66,42 @@ $(document).ready(function () {
 		});
 	});
 
-
-
-
-
 	if ($(window).width() < 992) {
 		$('.section.fp-section').css("height", "100%")
-
 	}
 
-
-	// logo change when scroll
-	$(window).on('scroll', function () {
-		var scrollDistance = $(window).scrollTop();
-		var $header = $(".js-header");
-		if (scrollDistance > 80) {
-			$header.addClass("header--scrolling");
+	$(window).resize(function () {
+		if ($(window).width() < 992) {
+			$('.section.fp-section').css("height", "100%")
 		}
-		else {
-			$header.removeClass("header--scrolling")
+		if ($(window).width() < 576) {
+			$("#myCarousel2 .owl-carousel").owlCarousel({
+				items: 2,
+			});
 		}
 	})
 
+
+
+
+	// logo change when scroll
+	// $(window).on('scroll', function () {
+	// 	var scrollDistance = $(window).scrollTop();
+	// 	var $header = $(".js-header");
+	// 	if (scrollDistance > 80) {
+	// 		$header.addClass("header--scrolling");
+	// 	}
+	// 	else {
+	// 		$header.removeClass("header--scrolling")
+	// 	}
+	// })
+
 	// rellax initialization如果行動裝置不要視差滾動就if斷點
-	if (screen.width > 768) {
-		var rellax = new Rellax('.rellax', {
-			center: true
-		});
-	}
+	// if (screen.width > 768) {
+	// 	var rellax = new Rellax('.rellax', {
+	// 		center: true
+	// 	});
+	// }
 
 
 

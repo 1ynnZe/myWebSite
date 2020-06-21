@@ -19,16 +19,45 @@
 
 <body>
     <div class="wrapper">
-        <div class="container">
-            <div class="row py-5">
-                <div class="col-lg-4">
-                    <div class="myPic" style="background-image: url('https://picsum.photos/id/1005/300/600');">
-                    </div>
+        <!--header start-->
+        <header class="header">
+            <div class="container">
+                <div class="navbar">
+                    <a href="./index.html" class="navbar-logo" style="background-image: url('./img/logo.png');"></a> <a
+                        href="#ModalContact" data-toggle="modal" class="btn btn-prime">聯絡我<i
+                            class="mdi mdi-chevron-right"></i>
+                    </a>
                 </div>
-                <div class="col-lg-8">
+                <a href=" #" class="navbar__logo"></a>
+                <a href="#overlay" class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <div id="overlay" class="nav navbar__nav popup-nav u-clearfix">
+                    <a href="#!" class="popup-close">
+                        <span></span>
+                        <span></span>
+                    </a>
+
+                </div>
+            </div>
+
+        </header>
+        <!--header end-->
+        <section>
+            <div class="myPic" style="background-image: url('./img/my.jpg');">
+                <div id="glass" class="glass"></div>
+            </div>
+            <div class="container about-content-outter">
+                <div id="parentBar">
+                    <div id="bar-block"></div>
+                </div>
+                <div class="about-content p-5">
                     <h3 class=""><i class="mdi mdi-chevron-right"></i>Lynn</h3>
                     <p class="px-2">
                         畢業於國立臺灣藝術大學 多媒體動畫學系。
+                        <br>
                         從事原畫動畫工作有近三年經驗，近來為了開拓其他設計方面的領域，專攻於網頁ＵＩ設計方面。
                     </p>
                     <h5 class=""><i class="mdi mdi-chevron-right"></i>興趣</h5>
@@ -126,12 +155,128 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
+        </section>
+
+    </div>
+    <!-- Modal -->
+    <div id="ModalContact" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 style="vertical-align: middle;" class="modal-title"><img src="./img/logo.png" alt="">
+                        <span>聯絡我</span>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body">
+
+                    <form class="gform" id="gform" method="POST" data-email="from_email@example.com"
+                        action="https://script.google.com/macros/s/AKfycby1fTU4nt4FM-mFw1ZP6_oazjSLXnkXovYhVd46dTH6sssTAvyf/exec">
+                        <div class="form-elements">
+                            <div class="form-group">
+                                <label for="username">
+                                    <i class="mdi mdi-account-outline"></i>姓名
+                                </label>
+                                <input name="name" id="name" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="mdi mdi-email-outline"></i>Email</label>
+                                <input name="email" id="email" type="email" class="form-control" placeholder="請輸入..."
+                                    value="YourEmail@gmail.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message"><i class="mdi mdi-comment-processing-outline"></i>留言
+                                </label>
+
+                                <!-- rows顯示幾行(超出會有卷軸) -->
+                                <textarea id="message" name="message" cols="30" rows="10" class="form-control"
+                                    placeholder="請輸入..." minlength="3"></textarea>
+                            </div>
+                            <button id="submit" class="btn btn-prime float-right" type="submit">送出表單</button>
+                        </div>
+                        <!-- Customise the Thankyou Message People See when they submit the form: -->
+                        <div id="thankyou_message" style="display:none;">
+                            <h5>感謝您的來信！我會盡快回覆您的！ </h5>
+                            <h6>Thanks for contacting me!
+                                We will get back to you soon!</h6>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div> -->
+            </div>
+
         </div>
     </div>
+
+
+    <script src="./js/jquery-3.2.1.min.js"></script>
     <script src="./js/bootstrap.js"></script>
-    <script src="./js/jquery.fullpage.min.js"></script>
+    <!-- Submit the Form to Google Using "AJAX" -->
+    <!-- END -->
+    <script src="./js/form-submission-handler.js"></script>
+    <script data-cfasync="false" type="text/javascript"
+        src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
     <script src="./js/custom.js"></script>
+    <script>
+
+        var div1 = document.getElementById('bar-block')
+        var parent = document.getElementById('parentBar')
+        var glass = document.getElementById('glass')
+        //拖曳
+        div1.onmousedown = function (ev) {
+            var oEv = ev || event//ie用event，其他瀏覽器要傳參數
+            //先求出鼠標到div1間的距離，而這距離是要一直保持不變
+            disY = oEv.clientY - div1.offsetTop
+
+            //也能用div1.onmousemove但這樣拖的快時或div太小，鼠標跑出div時就拖不動
+            document.onmousemove = function (ev) {
+                var oEv = ev || event//ie用event，其他瀏覽器要傳參數
+                var t = oEv.clientY - disY
+                //阻止拖出視窗外
+                if (t < 0) {
+                    t = 0
+                }
+                else if (t > parent.offsetHeight - div1.offsetHeight) {
+                    t = parent.clientHeight - div1.offsetHeight
+                }
+                //鼠標移動跟著動    
+                div1.style.top = t + 'px'
+                //紀錄拖曳變為比例
+                var scale = t / (parent.offsetHeight - div1.offsetHeight)
+                //所以scale就是0~1間 
+                var scaleInt = Math.round(100 * scale)
+                console.log(scaleInt)
+                glass.style.height = 100 - scaleInt + "%"
+                console.log(glass.style.height)
+                glass.classList.add('noword')
+
+            }
+
+            document.onmouseup = function () {
+                document.onmousemove = null
+                document.onmouseup = null
+                glass.classList.remove('noword')
+
+            }
+            return false//在mousedown裡阻止火狐拖曳的bug(如果div1內是空的就會有bug)
+
+        }
+
+
+
+
+
+    </script>
 </body>
 
 </html>
