@@ -11,6 +11,65 @@ $(document).ready(function () {
 	});
 
 	//owl-carousel
+	$(window).resize(function () {
+		if ($(window).width() < 992) {
+			$("#myCarousel2 .owl-carousel").owlCarousel({
+				items: 2,
+				loop: true,
+				pullDrag: false,
+				navText: [],//預設有navText就是前後頁箭頭是文字，這裡我們不要就寫個空陣列
+				dots: true,//預設有點，這裡我們不要
+				rewind: true,
+				autoplay: true,
+				margin: 0,
+				nav: false,
+				mouseDrag: true,
+				touchDrag: true
+			});
+			$("#myCarousel3 .owl-carousel").owlCarousel({
+				items: 2,
+				loop: true,
+				pullDrag: false,
+				navText: [],//預設有navText就是前後頁箭頭是文字，這裡我們不要就寫個空陣列
+				dots: true,//預設有點，這裡我們不要
+				rewind: true,
+				autoplay: true,
+				margin: 0,
+				nav: false,
+				mouseDrag: true,
+				touchDrag: true
+			});
+		}
+	})
+	if ($(window).width() < 992) {
+		$("#myCarousel2 .owl-carousel").owlCarousel({
+			items: 2,
+			loop: true,
+			pullDrag: false,
+			navText: [],//預設有navText就是前後頁箭頭是文字，這裡我們不要就寫個空陣列
+			dots: true,//預設有點，這裡我們不要
+			rewind: true,
+			autoplay: true,
+			margin: 0,
+			nav: false,
+			mouseDrag: true,
+			touchDrag: true
+		});
+		$("#myCarousel3 .owl-carousel").owlCarousel({
+			items: 2,
+			loop: true,
+			pullDrag: false,
+			navText: [],//預設有navText就是前後頁箭頭是文字，這裡我們不要就寫個空陣列
+			dots: true,//預設有點，這裡我們不要
+			rewind: true,
+			autoplay: true,
+			margin: 0,
+			nav: false,
+			mouseDrag: true,
+			touchDrag: true
+		});
+	}
+
 	$("#myCarousel .owl-carousel").owlCarousel({
 		items: 1,
 		loop: true,
@@ -39,11 +98,19 @@ $(document).ready(function () {
 		mouseDrag: true,
 		touchDrag: true
 	});
-	if ($(window).width() < 576) {
-		$("#myCarousel2 .owl-carousel").owlCarousel({
-			items: 2,
-		});
-	}
+	$("#myCarousel3 .owl-carousel").owlCarousel({
+		items: 4,
+		loop: true,
+		pullDrag: false,
+		navText: [],//預設有navText就是前後頁箭頭是文字，這裡我們不要就寫個空陣列
+		dots: true,//預設有點，這裡我們不要
+		rewind: true,
+		autoplay: true,
+		margin: 0,
+		nav: false,
+		mouseDrag: true,
+		touchDrag: true
+	});
 
 	//手機popupmenu下滑時 消失
 	$(window).on('scroll', function () {

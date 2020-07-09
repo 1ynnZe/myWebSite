@@ -24,13 +24,12 @@
 
 	<!-- loading start-->
 	<div class="preloader">
-		<div class="loader"></div>
 		<img src="./img/run.gif" alt="">
 	</div>
 	<!-- loading end-->
 
 
-	<div class="wrapper">
+	<div class="wrapper" style="display: none;">
 		<!--header start-->
 		<header class="header">
 			<div class="container">
@@ -80,6 +79,8 @@
 			<!-- about start -->
 			<div class="fp-auto-height">
 				<div class="a-bg dark-bg"></div>
+				<div class="linetwo"></div>
+				<div class="linetwo-2"></div>
 				<div class="container">
 					<div class="row mt-5">
 						<div class="col-xl-3 col-lg-6 pb-3 pb-xl-0">
@@ -144,6 +145,8 @@
 
 			</div>
 			<div class="fp-auto-height darklinear-bg ">
+				<div class="line"></div>
+				<div class="linetwo-3"></div>
 				<div class="container min-vh-100">
 					<div class="about-box">
 						<img src="./img/logo_v.png" alt="">
@@ -253,6 +256,8 @@
 			<!-- 插畫 end -->
 
 			<div data-ancher="thirdPage" class="section">
+				<div class="linetwo-6"></div>
+				<div class="linetwo-7"></div>
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
@@ -352,12 +357,15 @@
 
 			</div>
 			<div data-ancher="4thPage" class="design section darklinear-bg">
+				<div class="line"></div>
+				<div class="linetwo"></div>
+				<div class="linetwo-2"></div>
+
 				<div class="container pt-5">
 					<div class="row py-5">
 						<div class="col-auto">
 							<h1 class="title mr-4">平面視覺設計<span>/</span></h1>
 						</div>
-
 						<div class="col-10">
 							<div class="tabs-left">
 								<ul id="tabs" class="nav nav-tabs">
@@ -460,6 +468,8 @@
 				</div>
 			</div>
 			<div data-ancher="5thPage" class="section web">
+				<div class="line-5"></div>
+				<div class="line-2"></div>
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
@@ -493,6 +503,8 @@
 
 
 			<div class="fp-auto-height dark-bg">
+				<div class="line-3"></div>
+				<div class="line-4"></div>
 				<div class="container">
 					<div class="row py-5">
 						<div class="col-12">
@@ -508,8 +520,8 @@
 								</div>
 								<div class="col-md-3 col-6 item">
 									<a data-fancybox="group2"
-										href="https://static.wixstatic.com/media/187431_93f5237d04db4bbaaecd37b3c0971679~mv2_d_2480_3508_s_4_2.png/v1/fill/w_797,h_1128,al_c,q_95,usm_0.66_1.00_0.01/187431_93f5237d04db4bbaaecd37b3c0971679~mv2_d_2480_3508_s_4_2.webp">
-										<img class="imgbox" src="./img/lichi.jpg" alt="">
+										href="https://static.wixstatic.com/media/187431_d3870ef35d1946ae956d2c92cd866bfc~mv2.jpg">
+										<img class="imgbox" src="./img/icon_flow_min.jpg" alt="">
 									</a>
 								</div>
 
@@ -523,6 +535,7 @@
 			</div>
 
 			<div class="fp-auto-height mb-5">
+
 				<div class="container">
 					<div class="row py-5">
 						<div class="col-12">
@@ -585,8 +598,9 @@
 						lynn840502@gmail.com
 					</div>
 
-					<a href="#ModalContact" data-toggle="modal" class="btn btn-prime">聯絡我<i
-							class="mdi mdi-chevron-right"></i>
+					<a href="#ModalContact" data-toggle="modal" style="min-width: 0%;" class="btn btn-prime">
+						<span class="d-none d-sm-inline-block"> 聯絡我<i class="mdi mdi-chevron-right"></i></span>
+						<i class="mdi mdi-email-outline d-inline-block d-sm-none"></i>
 					</a>
 
 				</div>
@@ -672,16 +686,12 @@
 
 	<!-- JS -->
 	<script src="./js/jquery-3.2.1.min.js"></script>
-	<script>
-		$(window).on('load', function () {
-			$('.preloader').addClass('complete')
-		})
-	</script>
+
 	<script src="./js/bootstrap.js"></script>
 	<script src="./js/jquery.fullpage.min.js"></script>
 	<script src="./js/owl-carousel/owl.carousel.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
+	<script src="./js/owl-carousel/owl.carousel2.3.4.min.js"></script>
 
 	<script src="./js/masonry/masonry_pkgd.mjs"></script>
 	<script src="./js/masonry/imagesloaded_pkgd.mjs"></script>
@@ -689,12 +699,19 @@
 
 	<script src="./js/jquery.fancybox.min.js"></script>
 	<script src="./js/form-submission-handler.js"></script>
-	<script data-cfasync="false" type="text/javascript"
-		src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
+	<script data-cfasync="false" type="text/javascript" src="./js/googole_mail.js"></script>
+
+	<!-- <script data-cfasync="false" type="text/javascript"
+		src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script> -->
 
 
 	<script src="./js/custom.js"></script>
-
+	<script>
+		$(window).on('load', function () {
+			$('.preloader').addClass('complete')
+			$('.wrapper').css('display', 'block')
+		})
+	</script>
 
 </body>
 

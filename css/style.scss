@@ -41,7 +41,8 @@ body{
     color: #999;
     letter-spacing: 0.2rem;
     background-color: $ColorSec;
-    width: 100%; overflow-x: hidden;
+    width: 100%; 
+    overflow-x: hidden;
 }
 hr {
     border-color: rgba(0,0,0,0.1)!important;
@@ -50,10 +51,12 @@ hr {
 }
 .wrapper{
     background-color: $ColorSec;
-    width: 100%;
-    // height: 100%;
-
 }
+.body-container{
+    padding-top: 65px;
+    width: 100%;
+}
+
 .dark-bg{
     background-color: $ColorDarkprime;
     
@@ -62,7 +65,9 @@ hr {
     background: $ColorDarkPrimelinear;
     
 }
-
+.color-prime{
+    color: $ColorPrime;
+}
 .flex-center{
     display: flex;
     justify-content: center;   
@@ -114,6 +119,8 @@ hr {
   }
   .preloader.complete:before{ 
     left: -50%;   
+    transform: rotateY(45deg);
+   
   }
   .preloader:after{
     content:"";
@@ -126,6 +133,8 @@ hr {
   }
   .preloader.complete:after{
     right: -50%;   
+    transform: rotateY(-45deg);
+
   }
   
   .loader{
@@ -149,13 +158,15 @@ hr {
     left: 0;
     right: 0;
     background-color: $ColorPrime;
-      animation: animateBg 2s linear infinite;
+    animation: animateBg 2s linear infinite;
   
   }
   .preloader.complete{
     opacity: 0;
     visibility:hidden;
     pointer-events:none;
+    perspective: 500;
+
   }
   @keyframes animate{
     0%{
@@ -417,7 +428,7 @@ hr {
 
 .scrollDown-btn{
     width: 1px;
-    height: 200px;
+    height: 400px;
     background-color: #fff;
     @include poa(100%,20%);
     z-index: 4;
@@ -426,9 +437,141 @@ hr {
     opacity: 0.4;
 }
 @keyframes breath{
-    0%{opacity: 0.4;height: 200px; @include poa(100%,20%);transform: rotate(-45deg);}
-    50%{opacity: 0.6;height: 300px; @include poa(110%,25%);transform: rotate(-45deg);}
-    100%{opacity: 0.4;height: 200px; @include poa(100%,20%);transform: rotate(-45deg);}
+    0%{opacity: 0.4;height: 300px; @include poa(100%,20%);transform: rotate(-45deg);}
+    50%{opacity: 0.6;height: 400px; @include poa(110%,25%);transform: rotate(-45deg);}
+    100%{opacity: 0.4;height: 300px; @include poa(100%,20%);transform: rotate(-45deg);}
+}
+.line{
+    position: absolute;
+    width: 1px;
+    height: 300px;
+    background-color: #fff;
+    top: 10%;
+    left: 80%;
+    z-index: 4;
+    transform: rotate(-45deg);
+    opacity: 0.4;
+}
+.line-2{
+    position: absolute;
+    width: 1px;
+    height: 200px;
+    background-color: #fff;
+    top: 80%;
+    left: 20%;
+    z-index: 4;
+    transform: rotate(-45deg);
+    opacity: 0.4;
+}
+.line-3{
+    position: absolute;
+    width: 1px;
+    height: 350px;
+    background-color: #fff;
+    top: 61%;
+    left: 22%;
+    z-index: 4;
+    transform: rotate(-45deg);
+    opacity: 1;
+}
+.line-4{
+    position: absolute;
+    width: 1px;
+    height: 350px;
+    background-color: #fff;
+    top: 58%;
+    left: 20%;
+    z-index: 4;
+    transform: rotate(-45deg);
+    opacity: 0.9;
+}
+.line-5{
+    position: absolute;
+    width: 1px;
+    height: 200px;
+    background-color: #fff;
+    top: 5%;
+    left: 50%;
+    z-index: 200;
+    transform: rotate(-45deg);
+    opacity: 0.9;
+}
+.linetwo{
+    position: absolute;
+    width: 1px;
+    height: 300px;
+    background-color: #fff;
+    top: 50%;
+    left: 20%;
+    z-index: 200;
+    transform: rotate(45deg);
+    opacity: 0.4;
+}
+.linetwo-2{
+    position: absolute;
+    width: 1px;
+    height: 300px;
+    background-color: #fff;
+    top: 58%;
+    left: 14%;
+    z-index: 200;
+    transform: rotate(45deg);
+    opacity: 0.6;
+}
+.linetwo-3{
+    position: absolute;
+    width: 1px;
+    height: 450px;
+    background-color: #fff;
+    top: 80%;
+    left: 14%;
+    z-index: 200;
+    transform: rotate(45deg);
+    opacity: 0.8;
+}
+.linetwo-4{
+    position: absolute;
+    width: 1px;
+    height: 350px;
+    background-color: #fff;
+    top: 20%;
+    left: 81%;
+    z-index: 200;
+    transform: rotate(45deg);
+    opacity: 0.8;
+}
+.linetwo-5{
+    position: absolute;
+    width: 1px;
+    height: 200px;
+    background-color: #fff;
+    top: 30%;
+    left: 80%;
+    z-index: 200;
+    transform: rotate(45deg);
+    opacity: 0.8;
+}
+.linetwo-6{
+    position: absolute;
+    width: 1px;
+    height: 200px;
+    background-color: #fff;
+    top: 80%;
+    left: 43%;
+    z-index: 200;
+    transform: rotate(45deg);
+    opacity: 0.8;
+}
+.linetwo-7{
+    position: absolute;
+    width: 1px;
+    height: 400px;
+    background-color: #fff;
+    top: 81%;
+    left: 47%;
+    z-index: 200;
+    transform: rotate(45deg);
+    opacity: 0.8;
 }
 @media (max-width:768px){
     .side-nav img{
@@ -619,7 +762,7 @@ hr {
     }
     .owl-carousel .owl-stage-outer{
         /*有旋轉所以高是寬*/
-        height: 500px;
+        // height: 500px;
     }
     #myCarousel p{
         padding-top: 0;
@@ -674,7 +817,7 @@ hr {
     cursor: pointer;
   }
 
-  .owl-dots{
+  #myCarousel2 .owl-dots,#myCarousel .owl-dots{
     position: absolute;
     height: 100%;
     top:calc(-50% - 30px);
@@ -686,7 +829,7 @@ hr {
     justify-content: flex-end;
     z-index: 3;
   }
-.owl-carousel button.owl-dot{
+ .owl-carousel button.owl-dot{
     height: 50px;
     width: 7px;
     margin-bottom:6px; 
@@ -794,11 +937,14 @@ hr {
     border: 1px solid #fff;
 
 }
-.imgbox:hover,.owl-carousel .owl-item img:hover{
-    opacity: 0.8;
+.imgbox:hover,.owl-carousel .owl-item img:hover,.owl-carousel .owl-item img.active{
+    opacity: 0.6;
     box-shadow: 0 0px 8px rgba($ColorPrime,0.8);
     border: 1px solid $ColorPrime;
     
+}
+.owl-carousel .owl-item img.active{
+    opacity: 0.8;
 }
 // .ani.fp-auto-height{
 //     height: 800px;
@@ -947,8 +1093,25 @@ hr {
 }
 .footer .btn{
    @include poa;
-   min-width: 106px;
    text-align: center;
+}
+@media(min-width:992px){
+    .footer .btn{
+        min-width: 106px;
+    }
+}
+@media(max-width:992px){
+    .footer .btn{     
+        left: 100%;
+        transform: translate(-100%,-50%);
+        @include bdrs(50%);
+        border: 1px solid $ColorPrime;
+    }
+    .footer .btn .mdi-email-outline:before{
+        font-size: 24px;
+       
+
+    }
 }
 .modal-title{
     color: $ColorPrime;
@@ -1097,10 +1260,6 @@ hr {
     background-color: #6ec1c0;;
   }
 
-
-  #thankyou_message{
-//    color: $ColorPrime;
-  }
 .listExperience > li {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1257,4 +1416,161 @@ hr {
   }
   
 
+/*--------關於我 結束--------*/
+
+
+
+/*--------角色 開始--------*/
+.navbar.role{
+    color: $ColorPrime;
+    justify-content:normal
+}
+.navbar.role .role-title{
+    margin-left: 4px;
+}
+.imgbox.role-banner{
+    width:100%;
+    border: 8px solid #fff;
+    @include bdrs;
+    mask-image: linear-gradient(right top, rgba(0,0,0,1), rgba(0,0,0,0.2));
+}
+.imgbox.role-banner:hover{
+    opacity: 1;
+    mask-image: linear-gradient(right top, rgba(0,0,0,1), rgba(0,0,0,0.8));
+}
+img.role-bg{
+    position: absolute;
+    top: calc(65px + 200px);
+    left: 0;
+    width: 300px;
+    max-width: 100%;
+} 
+img.role-bg.role-bg-t{
+    width: 460px;
+    top: calc(65px + 300px);
+}
+img.role{
+    width: 100%;
+    max-width: 100%;
+    cursor: pointer;
+}
+.role-card img{
+    position: relative;
+    width: 80%;
+    
+}
+.role-card::before{
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 350px;
+    background-color: #fff;
+    left: 5%;
+    top: 10%;
+
+}
+.role-card::after{
+    content: "剛格利";
+    position: absolute;
+    background-color: $ColorPrime;
+    width: 170px;
+    height: 170px;
+    top: 1rem;
+    left: 70%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+}
+.border-top{
+    border-top: 16px solid #fff !important;
+}
+.border-bottom{
+    border-bottom: 16px solid #fff !important;
+}
+.border-left{
+    border-left: 8px solid #fff !important;
+}
+.border-right{
+    height: 80%;
+    border-right: 8px solid #fff !important;
+}
+
+
+
+.footer-role{
+    background-color: #fff;
+}
+
+
+
+#myCarousel3 .owl-carousel .owl-item{
+    padding:0 .5rem;
+}
+#myCarousel3  .owl-carousel .owl-item img{
+    max-width: 100%;  
+    transition: all .3s;  
+    @include bdrs(50%);
+    cursor: pointer;
+  }
+
+@media(min-width: 992px){
+   
+    #myCarousel3  .btn.btn-prime{      
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    transform: translateX(100%);
+    }
+    #myCarousel3{
+        width: 500px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    #myCarousel3  .owl-carousel .owl-item img{
+       width: 125px;  
+    }
+}
+#myCarousel3 .owl-dots{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    right: calc(-100% - 1rem);
+    display: inline-block;
+  }
+@media(max-width: 992px){
+    #myCarousel3  .btn.btn-prime{
+        width: 100%; display: block;
+      }
+    #myCarousel3 .owl-dots{
+        position: absolute;
+        left: 40%;
+        top: calc(0%);
+        transform: translate(0%,-100%);
+    }
+}
+
+@media(max-width: 556px){
+    #myCarousel3 .owl-dots{
+        left: 30%;
+        top: calc(0%);
+        transform: translate(0%,-100%);
+    }
+  
+}
+  #myCarousel3 .owl-carousel button.owl-dot{
+    height: 7px;
+    width: 50px;
+    margin-right:6px; 
+    border:1px solid $ColorPrime; 
+    background-color:rgba($ColorPrime,0.4);
+  }
+
+  #myCarousel3 .owl-carousel button.owl-dot.active{
+    background-color:rgba($ColorPrime,1);
+
+  }
   
