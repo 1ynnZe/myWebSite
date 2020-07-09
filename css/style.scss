@@ -893,7 +893,7 @@ hr {
 }
 /*--------瀑布流--------*/
 
-.masonry img{
+.masonry img,.masonry video{
     width: 100%;
     height: auto;
     @include bdrs;
