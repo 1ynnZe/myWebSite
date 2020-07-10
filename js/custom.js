@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+	$('.menu-toggle').on('click', function () {
+		$('#overlay').css('opacity', '1').css('visibility', 'visible')
+	})
+
+	$('body.fp-viewing-5thPage').css("cssText", "overflow-x: hidden !important;")
+
+	$('.popup-close ').on('click', function () {
+		$('#overlay').css('opacity', '0').css('visibility', 'hidden')
+	})
 
 	// fullpage plugin initialization
 	$('#fullpage').fullpage({

@@ -14,6 +14,8 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,8 +23,6 @@ body {
   color: #999;
   letter-spacing: 0.2rem;
   background-color: #e8e8e8;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 hr {
@@ -38,6 +38,7 @@ hr {
 .body-container {
   padding-top: 65px;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .dark-bg {
@@ -71,17 +72,17 @@ hr {
 }
 
 .title {
-  -webkit-writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   color: #46bebd;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .vr-text {
-  -webkit-writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
 }
 
 .btn:focus, .btn:active {
@@ -273,9 +274,9 @@ hr {
   display: -ms-flexbox;
   display: flex;
   text-align: left;
-  -webkit-writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   min-width: 160px;
   z-index: 50;
   -webkit-box-align: end;
@@ -377,6 +378,9 @@ hr {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
+  #overlay {
+    z-index: 200;
+  }
   #overlay:target {
     opacity: 1;
     visibility: visible;
@@ -470,9 +474,9 @@ hr {
   position: relative;
   left: 85%;
   top: -12rem;
-  -webkit-writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
   z-index: 2;
@@ -754,6 +758,10 @@ hr {
   opacity: 0.8;
 }
 
+.side-nav li:last-child a {
+  margin-right: 0;
+}
+
 @media (max-width: 768px) {
   .side-nav img {
     width: 130px;
@@ -820,9 +828,9 @@ hr {
 }
 
 .a-content {
-  -webkit-writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   max-height: 400px;
   padding-top: 1rem;
 }
@@ -982,8 +990,13 @@ hr {
   #myCarousel .carousel1 {
     height: 500px;
   }
+  .owl-carousel {
+    /*有旋轉所以高是寬*/
+    height: 100%;
+  }
   .owl-carousel .owl-stage-outer {
     /*有旋轉所以高是寬*/
+    height: 100%;
   }
   #myCarousel p {
     padding-top: 0;
@@ -1238,12 +1251,14 @@ hr {
   display: flex;
 }
 
-.tab-content > .tab-pane {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  width: 1000px;
+@media (max-width: 992px) {
+  .design.section .tabs-left {
+    display: block;
+    width: 100%;
+  }
+  .tabs-left > .nav-tabs > li > a {
+    border-radius: 0px 15px 15px 0 !important;
+  }
 }
 
 .design.section p {
@@ -1252,20 +1267,13 @@ hr {
 }
 
 @media (max-width: 992px) {
-  .tab-content > .tab-pane {
-    width: 700px;
+  .design.section .imgbox {
+    width: 480px;
   }
 }
 
 @media (max-width: 768px) {
   .design.section .imgbox {
-    width: 400px;
-  }
-  .tab-content > .tab-pane {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     width: 400px;
   }
   .design.section p {
@@ -1275,9 +1283,6 @@ hr {
 
 @media (max-width: 380px) {
   .design.section .imgbox {
-    width: 200px;
-  }
-  .tab-content > .tab-pane {
     width: 300px;
   }
   .design.section p {
@@ -1469,9 +1474,9 @@ hr {
   content: "拖曳綠色小方塊";
   color: White;
   text-shadow: 0 0 10px #46bebd;
-  -webkit-writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1490,9 +1495,9 @@ hr {
   content: "";
   color: White;
   text-shadow: 0 0 10px #46bebd;
-  -webkit-writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   position: absolute;
   top: 50%;
   left: 50%;

@@ -182,8 +182,8 @@
                 </div>
 
                 <a href="#ModalContact" data-toggle="modal" style="min-width: 0%;" class="btn btn-prime">
-                    <span class="d-none d-sm-inline-block"> 聯絡我<i class="mdi mdi-chevron-right"></i></span>
-                    <i class="mdi mdi-email-outline d-inline-block d-sm-none"></i>
+                    <span class="d-none d-md-inline-block"> 聯絡我<i class="mdi mdi-chevron-right"></i></span>
+                    <i class="mdi mdi-email-outline d-inline-block d-md-none"></i>
                 </a>
 
             </div>
@@ -215,12 +215,12 @@
                                 <label for="username">
                                     <i class="mdi mdi-account-outline"></i>姓名
                                 </label>
-                                <input name="name" id="name" type="text" class="form-control">
+                                <input required="required" name="name" id="name" type="text" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="mdi mdi-email-outline"></i>Email</label>
-                                <input name="email" id="email" type="email" class="form-control" placeholder="請輸入..."
-                                    value="YourEmail@gmail.com" required>
+                                <input required="required" name="email" id="email" type="email" class="form-control"
+                                    placeholder="請輸入..." value="YourEmail@gmail.com" required>
                             </div>
 
                             <div class="form-group">
@@ -228,8 +228,8 @@
                                 </label>
 
                                 <!-- rows顯示幾行(超出會有卷軸) -->
-                                <textarea id="message" name="message" cols="30" rows="10" class="form-control"
-                                    placeholder="請輸入..." minlength="3"></textarea>
+                                <textarea required="required" id="message" name="message" cols="30" rows="10"
+                                    class="form-control" placeholder="請輸入..." minlength="3"></textarea required="required">
                             </div>
                             <button id="submit" class="btn btn-prime float-right" type="submit">送出表單</button>
                         </div>
