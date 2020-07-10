@@ -1932,4 +1932,45 @@ img.role {
 #myCarousel3 .owl-carousel button.owl-dot.active {
   background-color: #46bebd;
 }
+
+/*不想長大*/
+.role-grow {
+  position: absolute;
+  left: 80%;
+  top: -100px;
+  width: 120px;
+  z-index: 2;
+}
+
+.role-grow2 {
+  position: absolute;
+  left: 20%;
+  top: 72%;
+  width: 70px;
+  z-index: 2;
+}
+
+.role-grow3 {
+  position: absolute;
+  left: 24%;
+  top: -60px;
+  width: 120px;
+  z-index: 2;
+}
+
+.role-grow4 {
+  position: absolute;
+  left: 100%;
+  top: 80px;
+  width: 80px;
+  z-index: 2;
+}
+
+.role-grow5 {
+  position: absolute;
+  left: -20%;
+  top: 50%;
+  width: 80px;
+  z-index: 2;
+}
 /*# sourceMappingURL=style.css.map */
