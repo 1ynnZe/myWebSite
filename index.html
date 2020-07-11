@@ -808,8 +808,12 @@
 	<script src="./js/custom.js"></script>
 	<script>
 		$(function () {
-			$('.preloader').addClass('complete')
-			$('.wrapper').css('display', 'block')
+			$(window).on('load', function () {
+
+				$('.preloader').addClass('complete')
+				$('.wrapper').css('display', 'block')
+
+			})
 		})
 	</script>
 
