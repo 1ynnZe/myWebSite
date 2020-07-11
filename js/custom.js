@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 	// fullpage plugin initialization
 	$('#fullpage').fullpage({
-		anchors: ['firstPage', 'secondPage', 'thirdPage', '4thPage', '5thPage'],
+		anchors: ['firstPage', 'secondPage', 'thirdPage', '4thPage', '5thPage', '6thPage'],
 		menu: '#jsMenu',
 		autoScrolling: false,
 		fitToSection: false,//行動裝置上這個不理想所以打false

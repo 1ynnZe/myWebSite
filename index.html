@@ -37,16 +37,32 @@
 					<a href="#firstPage" class="navbar-logo" style="background-image: url('./img/logo_white.png');"></a>
 				</div>
 				<a href="#" class="navbar__logo"></a>
-				<a href="#overlay" class="menu-toggle">
+				<a href="#overlay" class="menu-toggle d-md-none">
 					<span></span>
 					<span></span>
 					<span></span>
 				</a>
-				<div id="overlay" class="nav navbar__nav popup-nav u-clearfix">
+				<div id="overlay" class="nav popup-nav d-md-none">
+
+					<ul class="nav__menu px-3">
+						<li class="logo"><a href="#firstPage">
+								<img class="img-fluid" src="./img/logo_v.png" alt="">
+							</a></li>
+						<li><a href="#secondPage">插畫</a></li>
+						<li><a href="#thirdPage">原畫動畫</a></li>
+						<li><a href="#4thPage">平面視覺設計</a></li>
+						<li><a href="#5thPage">前端網頁ＵＩ設計</a></li>
+
+
+
+
+					</ul>
 					<a href="#!" class="popup-close">
 						<span></span>
 						<span></span>
 					</a>
+
+
 
 				</div>
 			</div>
@@ -86,7 +102,8 @@
 						<div class="col-xl-3 col-lg-6 pb-3 pb-xl-0">
 							<div class="row f-sm-center">
 								<div class="col-sm-4 col-12 col-xl-12 a-img">
-									<a href="#" style="background-image: url('./img/01.png');"></a>
+									<a href="#4thPage" class="imgbox"
+										style="background-image: url('./img/01.png');"></a>
 								</div>
 								<div class="col-auto col-xl-12 a-content">
 									<div class="">
@@ -102,7 +119,8 @@
 						<div class="col-xl-3 col-lg-6 pb-3 pb-xl-0">
 							<div class="row f-sm-center">
 								<div class="col-sm-4 col-12 col-xl-12 a-img order-lg-0 order-sm-2">
-									<a href="#" style="background-image: url('./img/02.png');"></a>
+									<a href="#6thPage" class="imgbox"
+										style="background-image: url('./img/02.png');"></a>
 								</div>
 								<div class="col-auto col-xl-12  a-content">
 									<div>
@@ -119,7 +137,8 @@
 						<div class="col-xl-3 col-lg-6 pb-3 pb-xl-0">
 							<div class="row f-sm-center">
 								<div class="col-sm-4 col-12 col-xl-12 a-img">
-									<a href="#" style="background-image: url('./img/03.png');"></a>
+									<a href="#thirdPage" class="imgbox"
+										style="background-image: url('./img/03.png');"></a>
 								</div>
 
 								<div class="col-auto col-xl-12  a-content ml-lg-neg">
@@ -134,7 +153,8 @@
 						<div class="col-xl-3 col-lg-6 pb-3 pb-xl-0">
 							<div class="row f-sm-center">
 								<div class="col-sm-4 col-12 col-xl-12 a-img  order-lg-0 order-sm-2">
-									<a href="#" style="background-image: url('./img/04.png');"></a>
+									<a href="#5thPage" class="imgbox"
+										style="background-image: url('./img/04.png');"></a>
 								</div>
 								<div class="col-auto col-xl-12  a-content">
 									<div>
@@ -279,46 +299,57 @@
 
 							<div class="row masonry">
 								<div class="col-xl-3 col-md-4 col-6 item">
-									<video src="./v/hi02.mp4" loop muted="true" autoplay width="100%"></video>
+									<video src="./v/hi02.mp4" loop="true" autoplay="autoplay" muted="true"
+										width="100%"></video>
 								</div>
 								<div class="col-xl-3 col-md-4 col-6 item">
-									<video src="./v/BG02.mp4" loop muted="true" autoplay width="100%"></video>
+									<video src="./v/BG02.mp4" loop="true" autoplay="autoplay" muted="true"
+										width="100%"></video>
 
 								</div>
 								<div class="col-xl-4 col-6 item">
-									<video src="./v/HY07.mp4" loop muted="true" autoplay width="100%"></video>
+									<video src="./v/HY07.mp4" loop="true" autoplay="autoplay" muted="true"
+										width="100%"></video>
 								</div>
 								<div class="col-xl-3 col-md-4 col-6 item">
-									<video src="./v/BG01.mp4" loop muted="true" autoplay width="100%"></video>
+									<video src="./v/BG01.mp4" loop="true" autoplay="autoplay" muted="true"
+										width="100%"></video>
 
 
 								</div>
 								<div class="col-xl-3 col-md-4 col-6 item">
-									<video src="./v/BG03.mp4" loop muted="true" autoplay width="100%"></video>
+									<video src="./v/BG03.mp4" loop="true" autoplay="autoplay" muted="true"
+										width="100%"></video>
 
 								</div>
 								<div class="col-xl-3 col-md-4 col-6 item">
-									<video src="./v/HY12.mp4" loop muted="true" autoplay width="100%"></video>
+									<video src="./v/HY12.mp4" loop="true" autoplay="autoplay" muted="true"
+										width="100%"></video>
 
 								</div>
 								<div class="col-xl-3 col-md-4 col-6 item">
-									<video src="./v/HY85_01.mp4" loop muted="true" autoplay width="100%"></video>
+									<video src="./v/HY85_01.mp4" loop="true" autoplay="autoplay" muted="true"
+										width="100%"></video>
 
 								</div>
 								<div class="col-xl-3 col-md-4 col-6 item">
-									<video src="./v/dmx02.mp4" loop muted="true" autoplay width="100%"></video>
+									<video src="./v/dmx02.mp4" loop="true" autoplay="autoplay" muted="true"
+										width="100%"></video>
 
 								</div>
 								<div class="col-xl-3 col-md-4 col-6 item">
-									<video src="./v/HY85_02.mp4" loop muted="true" autoplay width="100%"></video>
+									<video src="./v/HY85_02.mp4" loop="true" autoplay="autoplay" muted="true"
+										width="100%"></video>
 
 								</div>
 								<div class="col-xl-3 col-md-4 col-6 item">
-									<video src="./v/HY85_103.mp4" loop muted="true" autoplay width="100%"></video>
+									<video src="./v/HY85_103.mp4" loop="true" autoplay="autoplay" muted="true"
+										width="100%"></video>
 
 								</div>
 								<div class="col-xl-4 col-6 item">
-									<video src="./v/dmx01.mp4" loop muted="true" autoplay width="100%"></video>
+									<video src="./v/dmx01.mp4" loop="true" autoplay="autoplay" muted="true"
+										width="100%"></video>
 
 
 								</div>
@@ -385,7 +416,8 @@
 				<div class="line"></div>
 				<div class="linetwo"></div>
 				<div class="linetwo-2"></div>
-
+				<div class="linetwo-8"></div>
+				<div class="bg-box"></div>
 				<div class="container pt-5">
 					<div class="row py-5">
 						<div class="col-auto">
@@ -413,7 +445,7 @@
 										<img class="imgbox"
 											src="https://static.wixstatic.com/media/187431_4739bcef88684e20994e9ff97652aeff~mv2.png"
 											alt="">
-										<p class="pt-2"> 店家玉計行烘焙烘焙原料店 logo 設計
+										<p class="pt-2"> 店家玉記行烘焙烘焙原料店 logo 設計
 											<br><br>
 											家這間店是有多年歷史的老店。
 											<br>而老店有穩固的感覺，因此 logo 主體形狀往矩形方面發想。
@@ -507,13 +539,23 @@
 					</div>
 				</div>
 			</div>
-			<div data-ancher="5thPage" class="section web">
+			<div data-ancher="5thPage" class="section web dark-bg">
 				<div class="line-5"></div>
 				<div class="line-2"></div>
 				<div class="container">
 					<div class="row">
-						<div class="col-12">
+						<div class="col-10">
 							<div class="row masonry">
+								<div class="col-md-3 col-6  item">
+									<p class="color-prime">
+										UI設計，會自行製作ICON與各種插圖。<br>
+										並且也包含前端互動的JS。<br>
+										會使用Bootstrap\Jquery\<br>Jquery UI\
+										Jquery popper\ＪavaScript
+										等。
+
+									</p>
+								</div>
 								<div class="col-md-3 col-6 item"><a target="_blank" rel="noopener noreferrer"
 										href="https://html-borg-20200121test.surge.sh/"><img class="imgbox"
 											src="./img/borg.jpg" alt=""></a></div>
@@ -523,25 +565,38 @@
 								<div class="col-md-3 col-6 item"><a target="_blank" rel="noopener noreferrer"
 										href="http://maa.ntua.edu.tw/exhibition/2016maa/index.html"><img class="imgbox"
 											src="./img/block.jpg" alt=""></a></div>
-								<div class="col-md-3 col-6 item">
-									<h1 style="z-index: 4;" class="ani title float-right">前端網頁ＵＩ設計<span>/</span></h1>
-								</div>
+
 								<div class="col-md-3 col-6 item"><a target="_blank" rel="noopener noreferrer"
 										href="http://118.163.100.69/WebSite03/MISPortal/index_page.html"><img
 											class="imgbox" src="./img/mis.jpg" alt=""></a>
 								</div>
+								<div class="col-md-3 col-6  item">
+									<p class="color-prime">
+										左圖連結為EIP產品，其中裡面的ISO與各類文件可拖拉中間的粗線改變寬度，
+										其功能也是用jq自行寫的。
+									</p>
+								</div>
+								<div class="col-md-3 col-6 item"><a target="_blank" rel="noopener noreferrer"
+										href="https://lynn840502.github.io/myWebSite"><img class="imgbox"
+											src="./img/mySite.jpg" alt=""></a></div>
+								<div class="col-12  item">
+									<p class="color-sec">
+										會使用gitHub了解git flow。
+										了解ＭＶＣ架構，程式方面常使用ＶＳcode\SublimeText3，會用DreamWeaver。
+										介面設計方面除了會AodobeAI也會使用Sketch\Adobe XD
 
-
-
+									</p>
+								</div>
 							</div>
 
+						</div>
+						<div class="col-2">
+							<h1 style="z-index: 4;" class="title">前端網頁ＵＩ設計<span>/</span></h1>
 						</div>
 					</div>
 
 				</div>
 			</div>
-
-
 			<div class="fp-auto-height dark-bg">
 				<div class="line-3"></div>
 				<div class="line-4"></div>
@@ -574,8 +629,7 @@
 				</div>
 			</div>
 
-			<div class="fp-auto-height mb-5">
-
+			<div data-ancher="6thPage" class="section mb-5">
 				<div class="container">
 					<div class="row py-5">
 						<div class="col-12">
@@ -609,8 +663,16 @@
 										<img class="imgbox" src="./img/ChineseValentine-01.jpg" alt=""></a>
 								</div>
 								<div class="col-md-3 col-6 item"><a data-fancybox="group3"
+										href="https://static.wixstatic.com/media/187431_bf46fa0069424163839ad008f72d778c.jpg">
+										<img class="imgbox" src="./img/moz.jpg" alt=""></a>
+								</div>
+								<div class="col-md-3 col-6 item"><a data-fancybox="group3"
 										href="https://static.wixstatic.com/media/187431_b1d7b0ca675742eaa508a560455114fc~mv2.png">
 										<img class="imgbox" src="./img/ChineseValentine-02.jpg" alt=""></a>
+								</div>
+								<div class="col-md-3 col-6 item"><a data-fancybox="group3"
+										href="https://static.wixstatic.com/media/187431_74c10aaf99174ee9abbb01005bd6e0e9.jpg">
+										<img class="imgbox" src="./img/mozD.png" alt=""></a>
 								</div>
 
 

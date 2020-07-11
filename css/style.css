@@ -1,4 +1,42 @@
 @charset "UTF-8";
+/*--------loading 開始--------*/
+/*--------loading 結束--------*/
+/*--------側邊選單 開始--------*/
+/*--------側邊選單 結束--------*/
+/*--------header 開始--------*/
+/*menu-toggle*/
+/*popup-nav*/
+/*popup-close*/
+/*--------header 結束--------*/
+/*--------主視覺 開始--------*/
+/*--------裝飾線line左上右下/linetwo右上左下 開始--------*/
+/*--------裝飾線line左上右下/linetwo右上左下 結束--------*/
+/*RWD側邊選單side-nav/主視覺選單navbar-nav--------*/
+/*--------主視覺 結束--------*/
+/*--------關於我 開始--------*/
+/*--------關於我 結束--------*/
+/*--------插圖 開始--------*/
+/*角色立繪*/
+/*--------插圖 結束--------*/
+/*--------原動畫 開始--------*/
+/*--------瀑布流--------*/
+/*--------fancybox--------*/
+/*--------原動畫 結束--------*/
+/*--------平面設計 開始--------*/
+/*--------平面設計 結束--------*/
+/*--------footer 開始--------*/
+/*--------footer 結束--------*/
+/*--------聯絡我modal--------*/
+/*--------關於我頁面 開始--------*/
+/*拉bar*/
+/*專業技能*/
+/*程式技能*/
+/*--------關於我頁面 結束--------*/
+/*--------角色 開始--------*/
+/*border*/
+/*footer-role*/
+/*--------角色 結束--------*/
+/*不想長大*/
 /*Noto Sans TC*/
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional");
 a {
@@ -52,6 +90,10 @@ hr {
 
 .color-prime {
   color: #46bebd;
+}
+
+.color-sec {
+  color: #e8e8e8;
 }
 
 .flex-center {
@@ -266,6 +308,7 @@ hr {
 }
 
 /*--------loading 結束--------*/
+/*--------側邊選單 開始--------*/
 .side-nav {
   position: fixed;
   right: .5rem;
@@ -321,6 +364,8 @@ hr {
   opacity: .8;
 }
 
+/*--------側邊選單 結束--------*/
+/*--------header 開始--------*/
 .header {
   position: fixed;
   top: 0;
@@ -338,7 +383,7 @@ hr {
   background-size: cover;
 }
 
-/* menu-toggle */
+/*menu-toggle*/
 .menu-toggle {
   position: absolute;
   top: 0;
@@ -350,7 +395,7 @@ hr {
   padding-top: 16px;
 }
 
-@media (min-width: 961px) {
+@media (min-width: 600px) {
   .menu-toggle {
     display: none;
   }
@@ -364,8 +409,12 @@ hr {
   margin-bottom: 8px;
 }
 
-/* popup-nav */
-@media (max-width: 960px) {
+/*popup-nav*/
+.popup-nav .nav__menu {
+  display: none;
+}
+
+@media (max-width: 600px) {
   .popup-nav {
     position: fixed;
     top: 0;
@@ -386,22 +435,51 @@ hr {
     visibility: visible;
   }
   .popup-nav .nav__menu {
-    float: none;
     padding-top: 56px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
   .popup-nav .nav__menu li {
-    float: none;
+    background-color: #fff;
+    color: #46bebd;
+    padding: 12px 6px;
+    margin-right: 6px;
+    margin-left: 6px;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-lr;
+    max-height: 288px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
   }
-  .popup-nav .menu__item {
-    text-align: center;
-    padding: 16px;
+  .popup-nav .nav__menu li.logo {
+    width: 50px;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
   }
-  .popup-nav .nav__icon-group {
-    float: none;
-    text-align: center;
-    padding: 16px;
+  .popup-nav .nav__menu li:hover {
+    background-color: #46bebd;
+    color: #fff;
+    -webkit-box-shadow: 0 0 8px rgba(70, 190, 189, 0.8);
+            box-shadow: 0 0 8px rgba(70, 190, 189, 0.8);
+    padding-top: 2rem;
   }
-  /* popup-close */
+  .popup-nav .nav__menu li.logo:hover {
+    -webkit-box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    background-color: #fff;
+    padding-top: 0;
+  }
+  /*popup-close*/
   .popup-close {
     position: absolute;
     top: 0;
@@ -429,6 +507,7 @@ hr {
   }
 }
 
+/*--------header 結束--------*/
 /*--------主視覺 開始--------*/
 .navbar-nav {
   position: absolute;
@@ -436,7 +515,7 @@ hr {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 50;
+  z-index: 10;
 }
 
 .navbar-nav .menu {
@@ -602,6 +681,7 @@ hr {
   }
 }
 
+/*--------裝飾線line左上右下/linetwo右上左下 開始--------*/
 .line {
   position: absolute;
   width: 1px;
@@ -661,7 +741,7 @@ hr {
   background-color: #fff;
   top: 5%;
   left: 50%;
-  z-index: 200;
+  z-index: 40;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   opacity: 0.9;
@@ -674,7 +754,7 @@ hr {
   background-color: #fff;
   top: 50%;
   left: 20%;
-  z-index: 200;
+  z-index: 40;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   opacity: 0.4;
@@ -687,7 +767,7 @@ hr {
   background-color: #fff;
   top: 58%;
   left: 14%;
-  z-index: 200;
+  z-index: 40;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   opacity: 0.6;
@@ -700,7 +780,7 @@ hr {
   background-color: #fff;
   top: 80%;
   left: 14%;
-  z-index: 200;
+  z-index: 40;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   opacity: 0.8;
@@ -713,7 +793,7 @@ hr {
   background-color: #fff;
   top: 20%;
   left: 81%;
-  z-index: 200;
+  z-index: 40;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   opacity: 0.8;
@@ -726,7 +806,7 @@ hr {
   background-color: #fff;
   top: 30%;
   left: 80%;
-  z-index: 200;
+  z-index: 40;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   opacity: 0.8;
@@ -739,7 +819,7 @@ hr {
   background-color: #fff;
   top: 80%;
   left: 43%;
-  z-index: 200;
+  z-index: 40;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   opacity: 0.8;
@@ -752,17 +832,32 @@ hr {
   background-color: #fff;
   top: 81%;
   left: 47%;
-  z-index: 200;
+  z-index: 40;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   opacity: 0.8;
 }
 
+.linetwo-8 {
+  position: absolute;
+  width: 1px;
+  height: 300px;
+  background-color: #fff;
+  top: 45%;
+  left: 70%;
+  z-index: 40;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0.8;
+}
+
+/*--------裝飾線line左上右下/linetwo右上左下 結束--------*/
+/*RWD側邊選單side-nav/主視覺選單navbar-nav--------*/
 .side-nav li:last-child a {
   margin-right: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .side-nav img {
     width: 130px;
   }
@@ -776,12 +871,10 @@ hr {
   }
   .navbar-nav {
     position: absolute;
-    top: 65px;
-    left: 31px;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-transform: translate(0px);
-            transform: translate(0px);
+    top: 25vh;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+            transform: translatex(-50%);
   }
   .navbar-nav .menu li {
     margin-right: .5rem;
@@ -795,8 +888,8 @@ hr {
     transition: all .5s;
   }
   .slogan {
-    left: 85%;
-    top: 0;
+    position: absolute;
+    top: -16rem;
     letter-spacing: .25rem;
   }
   .slogan h2 {
@@ -808,14 +901,13 @@ hr {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    width: 400px;
-    height: auto;
     z-index: 1;
     max-width: 100%;
   }
 }
 
 /*--------主視覺 結束--------*/
+/*--------關於我 開始--------*/
 .a-img a {
   display: block;
   background-position: center;
@@ -825,6 +917,20 @@ hr {
   height: 400px;
   -webkit-box-shadow: 0 -1px 4px rgba(38, 57, 67, 0.2);
           box-shadow: 0 -1px 4px rgba(38, 57, 67, 0.2);
+  position: relative;
+}
+
+.a-img .imgbox {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.a-img .imgbox:hover {
+  opacity: 1 !important;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, black), to(rgba(0, 0, 0, 0.3)));
+  -webkit-mask-image: linear-gradient(top, black 70%, rgba(0, 0, 0, 0.3));
+          mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, black), to(rgba(0, 0, 0, 0.3)));
+          mask-image: linear-gradient(top, black 70%, rgba(0, 0, 0, 0.3));
 }
 
 .a-content {
@@ -934,6 +1040,7 @@ hr {
           box-shadow: 0 0 8px rgba(70, 190, 189, 0.8);
 }
 
+/*--------關於我 結束--------*/
 /*--------插圖 開始--------*/
 #myCarousel .carousel1 {
   -webkit-transform: rotate(90deg);
@@ -1016,6 +1123,7 @@ hr {
   }
 }
 
+/*角色立繪*/
 #myCarousel2 .carousel2 {
   height: 700px;
 }
@@ -1214,6 +1322,8 @@ hr {
   height: 100%;
 }
 
+/*--------原動畫 結束--------*/
+/*--------平面設計 開始--------*/
 .design.section {
   -webkit-box-shadow: inset 0 2px 20px rgba(232, 232, 232, 0.2);
           box-shadow: inset 0 2px 20px rgba(232, 232, 232, 0.2);
@@ -1237,6 +1347,18 @@ hr {
   display: flex;
 }
 
+.design.section .bg-box {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bbe9f5), to(#5fc6c6));
+  background: linear-gradient(to bottom, #bbe9f5, #5fc6c6);
+}
+
 .design.section .imgbox {
   width: 500px;
   height: auto;
@@ -1251,7 +1373,18 @@ hr {
   display: flex;
 }
 
+.design.section p {
+  padding-left: 1rem;
+  color: #fff;
+}
+
 @media (max-width: 992px) {
+  .design.section .bg-box {
+    width: 50px;
+    height: 53px;
+    left: 80%;
+    top: 40%;
+  }
   .design.section .tabs-left {
     display: block;
     width: 100%;
@@ -1259,14 +1392,6 @@ hr {
   .tabs-left > .nav-tabs > li > a {
     border-radius: 0px 15px 15px 0 !important;
   }
-}
-
-.design.section p {
-  padding-left: 1rem;
-  color: #fff;
-}
-
-@media (max-width: 992px) {
   .design.section .imgbox {
     width: 480px;
   }
@@ -1330,7 +1455,7 @@ hr {
           box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
-/*--------網頁設計 開始--------*/
+/*--------平面設計 結束--------*/
 /*--------footer 開始--------*/
 .footer {
   background-color: #fff;
@@ -1381,6 +1506,8 @@ hr {
   }
 }
 
+/*--------footer 結束--------*/
+/*--------聯絡我modal--------*/
 .modal-title {
   color: #46bebd;
 }
@@ -1420,7 +1547,7 @@ hr {
   margin: -1rem;
 }
 
-/*--------關於我 開始--------*/
+/*--------關於我頁面 開始--------*/
 .myPic {
   border: 1px solid #46bebd;
   width: 300px;
@@ -1561,7 +1688,7 @@ hr {
   display: flex;
 }
 
-/* 拉bar */
+/*拉bar*/
 .about-content {
   display: inline-block;
 }
@@ -1595,28 +1722,7 @@ hr {
   background-color: #6ec1c0;
 }
 
-.listExperience > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 10px;
-}
-
-.listExperience > li:nth-child(2n) ul {
-  border-color: #699bb6;
-}
-
-.listExperience > li:nth-child(2n+1) ul {
-  border-color: #6ec1c0;
-}
-
-.listExperience li ul {
-  padding-left: 10px;
-  margin-left: 10px;
-  border-left: solid 4px #e8e8e8;
-}
-
-/* list skill */
+/*專業技能*/
 .listSkill {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1690,7 +1796,7 @@ hr {
   top: 0;
 }
 
-/* list program */
+/*程式技能*/
 .listProgram .bar {
   width: 100%;
   height: 16px;
@@ -1750,7 +1856,7 @@ hr {
   width: 100%;
 }
 
-/*--------關於我 結束--------*/
+/*--------關於我頁面 結束--------*/
 /*--------角色 開始--------*/
 .navbar.role {
   color: #46bebd;
@@ -1836,6 +1942,7 @@ img.role {
   font-size: 17px;
 }
 
+/*border*/
 .border-top {
   border-top: 16px solid #fff !important;
 }
@@ -1853,6 +1960,7 @@ img.role {
   border-right: 8px solid #fff !important;
 }
 
+/*footer-role*/
 .footer-role {
   background-color: #fff;
 }
@@ -1933,6 +2041,7 @@ img.role {
   background-color: #46bebd;
 }
 
+/*--------角色 結束--------*/
 /*不想長大*/
 .role-grow {
   position: absolute;
