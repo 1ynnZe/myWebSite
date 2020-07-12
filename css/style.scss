@@ -16,7 +16,6 @@
 /*--------關於我 開始--------*/
 /*--------關於我 結束--------*/
 /*--------插圖 開始--------*/
-    /*角色立繪*/
 /*--------插圖 結束--------*/
 /*--------原動畫 開始--------*/
     /*--------瀑布流--------*/
@@ -71,11 +70,16 @@ a:hover{
 	text-decoration: none;
 	color: inherit;
 }
+*{
+    position: relative;
+    box-sizing: border-box;
+    // overflow-x: hidden;
+}
 body,html{
     margin:0;
     padding: 0;
     height: 100%;
-    max-width: 100%;
+    max-width: 100vw;
     overflow-x: hidden;
 }
 body{
@@ -129,6 +133,10 @@ hr {
     writing-mode: vertical-lr;
     color: $ColorPrime;
     text-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+.title span{
+    writing-mode: horizontal-tb;
+
 }
 .vr-text{
     -webkit-writing-mode: vertical-lr;
@@ -520,150 +528,152 @@ hr {
 }
 /*--------裝飾線line左上右下/linetwo右上左下 開始--------*/
 
-.line{
-    position: absolute;
-    width: 1px;
-    height: 300px;
-    background-color: #fff;
-    top: 10%;
-    left: 80%;
-    z-index: 4;
-    transform: rotate(-45deg);
-    opacity: 0.4;
+@media(min-width:992px){
+    .line{
+        position: absolute;
+        width: 1px;
+        height: 300px;
+        background-color: #fff;
+        top: 10%;
+        left: 80%;
+        z-index: 4;
+        transform: rotate(-45deg);
+        opacity: 0.4;
+    }
+    .line-2{
+        position: absolute;
+        width: 1px;
+        height: 200px;
+        background-color: #fff;
+        top: 80%;
+        left: 20%;
+        z-index: 4;
+        transform: rotate(-45deg);
+        opacity: 0.4;
+    }
+    .line-3{
+        position: absolute;
+        width: 1px;
+        height: 350px;
+        background-color: #fff;
+        top: 61%;
+        left: 22%;
+        z-index: 4;
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+    .line-4{
+        position: absolute;
+        width: 1px;
+        height: 350px;
+        background-color: #fff;
+        top: 58%;
+        left: 20%;
+        z-index: 4;
+        transform: rotate(-45deg);
+        opacity: 0.9;
+    }
+    .line-5{
+        position: absolute;
+        width: 1px;
+        height: 200px;
+        background-color: #fff;
+        top: 5%;
+        left: 50%;
+        z-index: 40;
+        transform: rotate(-45deg);
+        opacity: 0.9;
+    }
+    .linetwo{
+        position: absolute;
+        width: 1px;
+        height: 300px;
+        background-color: #fff;
+        top: 50%;
+        left: 20%;
+        z-index: 40;
+        transform: rotate(45deg);
+        opacity: 0.4;
+    }
+    .linetwo-2{
+        position: absolute;
+        width: 1px;
+        height: 300px;
+        background-color: #fff;
+        top: 58%;
+        left: 14%;
+        z-index: 40;
+        transform: rotate(45deg);
+        opacity: 0.6;
+    }
+    .linetwo-3{
+        position: absolute;
+        width: 1px;
+        height: 450px;
+        background-color: #fff;
+        top: 80%;
+        left: 14%;
+        z-index: 40;
+        transform: rotate(45deg);
+        opacity: 0.8;
+    }
+    .linetwo-4{
+        position: absolute;
+        width: 1px;
+        height: 350px;
+        background-color: #fff;
+        top: 20%;
+        left: 81%;
+        z-index: 40;
+        transform: rotate(45deg);
+        opacity: 0.8;
+    }
+    .linetwo-5{
+        position: absolute;
+        width: 1px;
+        height: 200px;
+        background-color: #fff;
+        top: 30%;
+        left: 80%;
+        z-index: 40;
+        transform: rotate(45deg);
+        opacity: 0.8;
+    }
+    .linetwo-6{
+        position: absolute;
+        width: 1px;
+        height: 200px;
+        background-color: #fff;
+        top: 80%;
+        left: 43%;
+        z-index: 40;
+        transform: rotate(45deg);
+        opacity: 0.8;
+    }
+    .linetwo-7{
+        position: absolute;
+        width: 1px;
+        height: 400px;
+        background-color: #fff;
+        top: 81%;
+        left: 47%;
+        z-index: 40;
+        transform: rotate(45deg);
+        opacity: 0.8;
+    }
+    .linetwo-8{
+        position: absolute;
+        width: 1px;
+        height: 300px;
+        background-color: #fff;
+        top: 45%;
+        left: 70%;
+        z-index: 40;
+        transform: rotate(45deg);
+        opacity: 0.8;
+    }
+    
 }
-.line-2{
-    position: absolute;
-    width: 1px;
-    height: 200px;
-    background-color: #fff;
-    top: 80%;
-    left: 20%;
-    z-index: 4;
-    transform: rotate(-45deg);
-    opacity: 0.4;
-}
-.line-3{
-    position: absolute;
-    width: 1px;
-    height: 350px;
-    background-color: #fff;
-    top: 61%;
-    left: 22%;
-    z-index: 4;
-    transform: rotate(-45deg);
-    opacity: 1;
-}
-.line-4{
-    position: absolute;
-    width: 1px;
-    height: 350px;
-    background-color: #fff;
-    top: 58%;
-    left: 20%;
-    z-index: 4;
-    transform: rotate(-45deg);
-    opacity: 0.9;
-}
-.line-5{
-    position: absolute;
-    width: 1px;
-    height: 200px;
-    background-color: #fff;
-    top: 5%;
-    left: 50%;
-    z-index: 40;
-    transform: rotate(-45deg);
-    opacity: 0.9;
-}
-.linetwo{
-    position: absolute;
-    width: 1px;
-    height: 300px;
-    background-color: #fff;
-    top: 50%;
-    left: 20%;
-    z-index: 40;
-    transform: rotate(45deg);
-    opacity: 0.4;
-}
-.linetwo-2{
-    position: absolute;
-    width: 1px;
-    height: 300px;
-    background-color: #fff;
-    top: 58%;
-    left: 14%;
-    z-index: 40;
-    transform: rotate(45deg);
-    opacity: 0.6;
-}
-.linetwo-3{
-    position: absolute;
-    width: 1px;
-    height: 450px;
-    background-color: #fff;
-    top: 80%;
-    left: 14%;
-    z-index: 40;
-    transform: rotate(45deg);
-    opacity: 0.8;
-}
-.linetwo-4{
-    position: absolute;
-    width: 1px;
-    height: 350px;
-    background-color: #fff;
-    top: 20%;
-    left: 81%;
-    z-index: 40;
-    transform: rotate(45deg);
-    opacity: 0.8;
-}
-.linetwo-5{
-    position: absolute;
-    width: 1px;
-    height: 200px;
-    background-color: #fff;
-    top: 30%;
-    left: 80%;
-    z-index: 40;
-    transform: rotate(45deg);
-    opacity: 0.8;
-}
-.linetwo-6{
-    position: absolute;
-    width: 1px;
-    height: 200px;
-    background-color: #fff;
-    top: 80%;
-    left: 43%;
-    z-index: 40;
-    transform: rotate(45deg);
-    opacity: 0.8;
-}
-.linetwo-7{
-    position: absolute;
-    width: 1px;
-    height: 400px;
-    background-color: #fff;
-    top: 81%;
-    left: 47%;
-    z-index: 40;
-    transform: rotate(45deg);
-    opacity: 0.8;
-}
-.linetwo-8{
-    position: absolute;
-    width: 1px;
-    height: 300px;
-    background-color: #fff;
-    top: 45%;
-    left: 70%;
-    z-index: 40;
-    transform: rotate(45deg);
-    opacity: 0.8;
-}
-
 /*--------裝飾線line左上右下/linetwo右上左下 結束--------*/
 
 /*RWD側邊選單side-nav/主視覺選單navbar-nav--------*/
@@ -819,168 +829,128 @@ hr {
 /*--------關於我 結束--------*/
 
 /*--------插圖 開始--------*/
-#myCarousel .carousel1{
-    transform: rotate(90deg);
-    z-index: 10;
-    // top: 1rem;
+.owl-carousel button.owl-dot.active,.owl-carousel button.owl-dot{
+    transition: all .3s;
 }
-#myCarousel .item{
-    display: flex;
-    transform: rotate(-90deg);  
-    
+.owl-carousel button:focus{
+    outline: none;
+    @include bdrs(0px);
 }
+.owl-carousel button.owl-dot.active{
+    background-color:rgba($ColorPrime,1)!important;
+  }
+  .owl-carousel button.owl-dot:not(.active):hover{
+    background-color:rgba($ColorPrime,0.7)!important;
 
-
-#myCarousel .owl-carousel .owl-item{
-    padding:0 1rem;
-}
-#myCarousel .imgbox{
-    @include bdrs(10%);
-      max-width:100%;
-      height: auto;
-      border: 8px solid #fff;
-      width: 400px;  
-}
-#myCarousel .title{
-    letter-spacing: 0.5rem;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: -1rem;
-    right: 77%;
-    transform: rotate(-90deg);  
-
-}
-
-
-.title span{
-    -webkit-writing-mode: horizontal-tb; 
-    -ms-writing-mode: horizontal-tb; 
-    writing-mode: horizontal-tb; 
-}
-
-#myCarousel p{
-    padding-top: 152px;
-}
-
-
-
-@media (max-width:768px){
-    #myCarousel .carousel1{
-        height: 500px;
-    }
-    .owl-carousel {
-         /*有旋轉所以高是寬*/
-         height: 100%;
-    }
-    .owl-carousel .owl-stage-outer{
-        /*有旋轉所以高是寬*/
-        height: 100%;
-    }
-    #myCarousel p{
-        padding-top: 0;
-    }
-    #myCarousel .imgbox{
-        width: 200px;
-        border: 4px solid #fff;
-
-    }
-}
-@media (max-width:576px){
-   
-    #myCarousel .item{
-        height: 300px;
-        align-items: center;
-    }
-   
-}
-
-
-/*角色立繪*/
-#myCarousel2 .carousel2{
-    height: 700px
-}
-
-#myCarousel2 .btn.btn-prime {
-  position: absolute;
-  left: 30%;
-  top: 50%;
-  transform: translateY(-50%);
-   
- 
- }
- #myCarousel2 .owl-carousel{    
-    transform: rotate(90deg) translate(40%, -50%);
-}
-#myCarousel2 .title{
-    float: right;
-    margin-top: -100px;
-}
-#myCarousel2  .owl-carousel .owl-stage-outer {  
-    height: 100%;
-} 
-#myCarousel2  .owl-carousel .owl-item{
-   padding: 0 .5rem;
-}
-  #myCarousel2  .owl-carousel .owl-item img{
-    transform: rotate(-90deg);   
-    max-width: 100%;   
-    transition: all .3s;  
+  }
+  #myCarousel .owl-carousel .owl-dots,#myCarousel2 .owl-carousel .owl-dots{
+    top: 0;
+    position: absolute;      
+    left: calc(100% - 2rem - 6px);
+    max-width: 10px;  
+  }
+#myCarousel2 .item .imgbox{
     @include bdrs(50%);
-    cursor: pointer;
-  }
-
-  #myCarousel2 .owl-dots,#myCarousel .owl-dots{
-    position: absolute;
-    height: 100%;
-    top:calc(-50% - 30px);
-    right:50%;
-    display: flex;
-    flex-direction: column;
-    transform: rotate(90deg)translate(-50%, 0%); 
-    display: flex;
-    justify-content: flex-end;
-    z-index: 3;
-  }
- .owl-carousel button.owl-dot{
+    transform-origin: center;
+    transform: rotate(90deg);
+}
+#myCarousel .owl-carousel button.owl-dot,#myCarousel2 .owl-carousel button{
     height: 50px;
     width: 7px;
-    margin-bottom:6px; 
-    border:1px solid $ColorPrime; 
-    background-color:rgba($ColorPrime,0.4);
-  }
-   .owl-carousel button.owl-dot.active{
-    background-color:rgba($ColorPrime,1);
+    border:1px solid $ColorPrime;
+    margin: 4px 0;
+    background-color:rgba($ColorPrime,0.4);   
+}
+#myCarousel .owl-carousel .owl-item .imgbox{
+    @include bdrs;
+    border: 8px solid #fff;
+    width: calc(100% - 4rem - 6px);
+}
+#myCarousel .carousel .owl-stage-outer{
+    position: relative;
+}
+#myCarousel .carousel p{
+  display: none;
+}
 
-  }
-  .owl-carousel button.owl-dot:focus{
-      outline: none;
-  }
-  @media (max-width:992px){
-    #myCarousel2 .owl-carousel{    
-    
-        transform: rotate(0deg) translate(0%, 0%);
-      
-    }
-    
-    #myCarousel2 .carousel2{     
-        height: 300px;
-        padding: 0;
-        transform: rotate(0deg);
-        transform-origin: 0% 0%;
-        margin-top: 5rem;
-    }
-    #myCarousel2  .owl-carousel .owl-item img{
-        transform: rotate(0deg);
+#myCarousel2 .item{
+    padding: 0 6px;
+}
+#myCarousel2 .item .imgbox{
+    cursor: pointer;
+   
+}
 
+
+@media(min-width:768px){
+    #myCarousel .carousel .title{
+        margin-left: calc(-5rem + 6px);
     }
-  
-    #myCarousel2 .btn.btn-prime{
+    #myCarousel .carousel p{
+        display: block;
+        position: absolute;
+        top: calc(2.5rem * 4);
+        right: 0;
+    }
+   
+    #myCarousel .owl-carousel .owl-dots{
+        top: 70%;
+ 
+    }
+    
+    #myCarousel2 .carousel{
+        position: relative;
+    }
+
+    #myCarousel2 .title{
+        margin-left: calc(50% - 2rem);
+    }
+    #myCarousel2 .owl-carousel {
+        position: absolute;
+        top: 0;
+        left: -70%;
+        transform: rotate(-90deg) scale(1.25);
+        transform-origin: right bottom;
+        margin: 10px;
+    }
+    #myCarousel2 .item .imgbox{
+        transform-origin: center;
+        transform: rotate(90deg);
+        width: 200px;
+        
+    
+    }
+    #myCarousel2 .owl-carousel .owl-dots{
+        transform: rotate(90deg) translate(-100%,-50%) scale(0.8);
+        position: absolute;
+        left: 30%;
         top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
+        
     }
-  }
+}
+@media(max-width:992px){
+    #myCarousel .carousel p{
+        position: relative;
+        top: 6px;
+    }
+}
+@media(max-width:768px){
+    
+    #myCarousel2 .owl-carousel .owl-dots{
+        transform: rotate(90deg);
+        left: 50%;
+        top: 100%;
+    }
+    #myCarousel2 .carousel{
+        display: flex;
+    }
+    #myCarousel2 .owl-carousel {
+        transform: rotate(-90deg);
+        width: calc(181px * 2 );
+        margin: auto;
+        
+    }
+}
 /*--------插圖 結束--------*/
 
 /*--------原動畫 開始--------*/
@@ -1017,30 +987,45 @@ hr {
     padding: 6px;
 }
 .bg-box.masonry-bg-box{
-   background: $ColorPrimelinear2;
-   position: absolute;
-   top: 40%;   
-   left: -60%;
-   height: 1000px;
-   width: 60%;
-   z-index: 0;
-    transform: rotate(45deg) translate(-50%,-50%);
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+//    background: $ColorPrimelinear2;
+//    position: absolute;
+//    top: 40%;   
+//    left: -60%;
+//    height: 1000px;
+//    max-width: 100%;
+//    max-height:100%;
+//    width: 60%;
+//    z-index: 0;
+//     transform: rotate(45deg) translate(-50%,-50%);
+//     box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
 
-   
 
 }
 
 .bg-box.masonry-bg-box2{
-   background: $ColorDarkPrimelinear2;
-   position: absolute;
-   top: 45%;   
-   left: -14%;
-   transform: rotate(45deg) ;
-   height: 800px;
-   width: 100%;
-   box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
-   z-index: 0;
+//    background: $ColorDarkPrimelinear2;
+//    position: absolute;
+//    top: 45%;   
+//    left: -14%;
+//    transform: rotate(45deg) ;
+//    height: 800px;
+//    width: 100%;
+//    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+//    z-index: 0;
+}
+@media(max-width:768px){
+    // .bg-box.masonry-bg-box{
+    //     top: 40%;   
+    //     left: -87%;
+    // }
+    // .bg-box.masonry-bg-box2{    
+    //     top: 5%;   
+    //     left: -56%;
+    //     transform: rotate(45deg) ;
+    //     height: 800px;
+    //     width: 100%;
+
+    // }  
 }
 .imgbox{
     max-width: 100%;
@@ -1101,6 +1086,7 @@ hr {
 
 .design.section .imgbox{
     width: 500px;
+    max-width: 100%;
     height: auto;
     border: 4px solid #fff;
 }
@@ -1116,10 +1102,10 @@ hr {
 
 @media(max-width:992px){
     .design.section .bg-box{
-        width: 50px;
-        height: 53px;
+        width: 100px;
+        height: 100px;
         left: 80%;
-        top: 40%;
+        top: 77%;
     } 
     .design.section .tabs-left{
         display: block;
@@ -1346,7 +1332,6 @@ hr {
     margin-left: 300px;
     display: flex;
 
-}
 
 /*拉bar*/
 .about-content{
@@ -1377,7 +1362,23 @@ hr {
     background-color: #6ec1c0;;
   }
 
-  
+}
+@media(max-width:992px){
+    .about-content-outter{
+        margin-left: 0;
+
+    
+    }
+    .glass:after{
+        display: none;
+    }
+    .about-content-outter #parentBar,#bar-block{
+        display: none;
+    }
+    .myPic{
+        background-size: 100%;
+    }
+}  
   /*專業技能*/
   .listSkill {
     display: -webkit-box;
@@ -1667,10 +1668,7 @@ img.role{
     background-color:rgba($ColorPrime,0.4);
   }
 
-  #myCarousel3 .owl-carousel button.owl-dot.active{
-    background-color:rgba($ColorPrime,1);
 
-  }
   
 /*--------角色 結束--------*/
 

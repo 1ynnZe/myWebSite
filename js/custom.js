@@ -4,7 +4,6 @@ $(document).ready(function () {
 		$('#overlay').css('opacity', '1').css('visibility', 'visible')
 	})
 
-	$('.fp-enabled').css("cssText", "overflow-x: hidden !important;")
 
 	$('.popup-close ').on('click', function () {
 		$('#overlay').css('opacity', '0').css('visibility', 'hidden')
@@ -20,36 +19,7 @@ $(document).ready(function () {
 	});
 
 	//owl-carousel
-	$(window).resize(function () {
-		if ($(window).width() < 992) {
-			$("#myCarousel2 .owl-carousel").owlCarousel({
-				items: 2,
-				loop: true,
-				pullDrag: false,
-				navText: [],//預設有navText就是前後頁箭頭是文字，這裡我們不要就寫個空陣列
-				dots: true,//預設有點，這裡我們不要
-				rewind: true,
-				autoplay: true,
-				margin: 0,
-				nav: false,
-				mouseDrag: true,
-				touchDrag: true
-			});
-			$("#myCarousel3 .owl-carousel").owlCarousel({
-				items: 2,
-				loop: true,
-				pullDrag: false,
-				navText: [],//預設有navText就是前後頁箭頭是文字，這裡我們不要就寫個空陣列
-				dots: true,//預設有點，這裡我們不要
-				rewind: true,
-				autoplay: true,
-				margin: 0,
-				nav: false,
-				mouseDrag: true,
-				touchDrag: true
-			});
-		}
-	})
+
 	if ($(window).width() < 992) {
 		$("#myCarousel2 .owl-carousel").owlCarousel({
 			items: 2,
@@ -78,19 +48,32 @@ $(document).ready(function () {
 			touchDrag: true
 		});
 	}
-
+	if ($(window).width() < 600) {
+		$("#myCarousel2 .owl-carousel").owlCarousel({
+			items: 1,
+			loop: true,
+			pullDrag: false,
+			navText: [],//預設有navText就是前後頁箭頭是文字，這裡我們不要就寫個空陣列
+			dots: true,//預設有點，這裡我們不要
+			rewind: true,
+			autoplay: true,
+			margin: 0,
+			nav: false,
+			mouseDrag: true,
+			touchDrag: true
+		});
+	}
 	$("#myCarousel .owl-carousel").owlCarousel({
 		items: 1,
 		loop: true,
 		pullDrag: false,
 		navText: [],//預設有navText就是前後頁箭頭是文字，這裡我們不要就寫個空陣列
-		dots: true,//預設有點，這裡我們不要
-		rewind: true,
 		autoplay: true,
-		margin: 0,
+		dots: true,
 		nav: false,
-		mouseDrag: true,
-		touchDrag: true,
+		autoplayHoverPause: true,
+		animateOut: 'slideOutUp',
+		animateIn: 'slideInUp'
 
 	});
 
@@ -99,13 +82,12 @@ $(document).ready(function () {
 		loop: true,
 		pullDrag: false,
 		navText: [],//預設有navText就是前後頁箭頭是文字，這裡我們不要就寫個空陣列
-		dots: true,//預設有點，這裡我們不要
-		rewind: true,
 		autoplay: true,
-		margin: 0,
+		dots: true,
 		nav: false,
-		mouseDrag: true,
-		touchDrag: true
+		autoplayHoverPause: true,
+		animateOut: 'slideOutUp',
+		animateIn: 'slideInUp'
 	});
 	$("#myCarousel3 .owl-carousel").owlCarousel({
 		items: 4,
