@@ -857,20 +857,26 @@ hr {
 #myCarousel .owl-carousel button.owl-dot,#myCarousel2 .owl-carousel button{
     height: 50px;
     width: 7px;
-    border:1px solid $ColorPrime;
+    border: 1px solid $ColorPrime;
     margin: 4px 0;
     background-color:rgba($ColorPrime,0.4);   
 }
 #myCarousel .owl-carousel .owl-item .imgbox{
     @include bdrs;
-    border: 8px solid #fff;
+    border: .5rem solid #fff;
     width: calc(100% - 4rem - 6px);
+}
+#myCarousel .owl-carousel .owl-item .imgbox img{
+    @include bdrs;
+
 }
 #myCarousel .carousel .owl-stage-outer{
     position: relative;
 }
 #myCarousel .carousel p{
-  display: none;
+  background-color: rgba($ColorSec,0.8);
+  padding: 4px 0;
+  @include bdrs(4px);
 }
 
 #myCarousel2 .item{
@@ -915,9 +921,7 @@ hr {
     }
     #myCarousel2 .item .imgbox{
         transform-origin: center;
-        transform: rotate(90deg);
-        width: 200px;
-        
+        transform: rotate(90deg);      
     
     }
     #myCarousel2 .owl-carousel .owl-dots{
@@ -928,26 +932,38 @@ hr {
         
     }
 }
-@media(max-width:992px){
+
+@media(max-width:600px){  
     #myCarousel .carousel p{
-        position: relative;
-        top: 6px;
+        position: absolute;
+        right: 0;
+        display: block;
+        top: 50%
+      
     }
-}
-@media(max-width:768px){    
+    #myCarousel .carousel .title{
+        position: absolute;
+         right: 2rem;
+         z-index: 2;
+     }  
     #myCarousel2 .owl-carousel .owl-dots{
+        position: relative;
         transform: rotate(90deg);
-        left: 50%;
-        top: 100%;
+       margin: auto 0;
     }
-    #myCarousel2 .carousel{
-        display: flex;
-    }
+  
     #myCarousel2 .owl-carousel {
         transform: rotate(-90deg);
         width: calc(181px * 2 );
         margin: auto;
+        margin-left: 2.5rem;
+        top: -200px;
         
+    }
+}
+@media(max-width:600px){
+    #myCarousel .carousel p{
+        display: none;
     }
 }
 /*--------插圖 結束--------*/
@@ -985,27 +1001,25 @@ hr {
 .masonry .item{
     padding: 6px;
 }
-@media(min-width:992px){
+@media(min-width:1200px){
     .bg-box.masonry-bg-box{
         background: $ColorPrimelinear2;
         position: absolute;
-        top: -50%;   
-        left: -50%;
-        height: 120%;
-        max-width: 100%;
-        max-height:100%;
+        top: -10%;   
+        left: -40%;
+        height: 100%;
         width: 80%;
         z-index: 0;
         transform: rotate(45deg);
         box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
-    
+        overflow: hidden;
      
      }
     .bg-box.masonry-bg-box2{
            background: $ColorDarkPrimelinear2;
            position: absolute;
-           top: 50%;   
-           left: 150%;
+           top: 30%;   
+           left: 100%;
            height: 100%;
            width: 100%;
            box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
@@ -1013,7 +1027,32 @@ hr {
     }
 }
 
-
+@media(max-width:1200px){
+    .bg-box.masonry-bg-box{
+        background: $ColorPrimelinear2;
+        position: absolute;
+        top: -5%;   
+        left: 0%;
+        height: calc(100% + 5%);
+        width: 100%;
+        z-index: 0;
+        transform: rotate(0deg);
+        box-shadow: inset 0 2px 5px rgba(0,0,0,0.2); 
+        overflow: hidden;
+     
+     }
+     .bg-box.masonry-bg-box2{
+        background: $ColorDarkPrimelinear2;
+        position: absolute;
+        top: -10%;
+        left: 20%;
+        height: 100%;
+        width: 100%;
+        box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 0;
+        transform: rotate(45deg);
+ }
+}
 
 
 .imgbox{
