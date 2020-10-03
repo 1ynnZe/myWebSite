@@ -36,6 +36,7 @@
 /*footer-role*/
 /*--------角色 結束--------*/
 /*不想長大*/
+@import url(../css/bootstrap.css);
 /*Noto Sans TC*/
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional");
 a {
