@@ -9,14 +9,6 @@ $(document).ready(function () {
 		$('#overlay').css('opacity', '0').css('visibility', 'hidden')
 	})
 
-	// fullpage plugin initialization
-	$('#fullpage').fullpage({
-		anchors: ['firstPage', 'secondPage', 'thirdPage', '4thPage', '5thPage', '6thPage'],
-		menu: '#jsMenu',
-		autoScrolling: false,
-		fitToSection: false,//行動裝置上這個不理想所以打false
-		scrollingSpeed: 1200
-	});
 
 	//owl-carousel
 
@@ -78,7 +70,7 @@ $(document).ready(function () {
 	});
 
 	$("#myCarousel2 .owl-carousel").owlCarousel({
-		items: 3,
+		items: 4,
 		loop: true,
 		pullDrag: false,
 		navText: [],//預設有navText就是前後頁箭頭是文字，這裡我們不要就寫個空陣列
