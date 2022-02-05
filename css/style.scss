@@ -151,6 +151,15 @@ hr {
 }
 
 
+
+
+
+#fullpage .section{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
 /*--------loading 開始--------*/
 .preloader{
     position: fixed;
@@ -856,7 +865,7 @@ hr {
     transform: rotate(90deg);
 }
 #myCarousel .owl-carousel button.owl-dot,#myCarousel2 .owl-carousel button{
-    height: 50px;
+    height: 40px;
     width: 7px;
     border: 1px solid $ColorPrime;
     margin: 4px 0;
@@ -866,6 +875,7 @@ hr {
     @include bdrs;
     border: .5rem solid #fff;
     width: calc(100% - 4rem - 6px);
+
 }
 #myCarousel .owl-carousel .owl-item .imgbox img{
     @include bdrs;
@@ -882,10 +892,11 @@ hr {
 
 #myCarousel2 .item{
     padding: 0 6px;
+    // max-width: 120px;
 }
 #myCarousel2 .item .imgbox{
     cursor: pointer;
-   
+    transform: rotate(90deg);
 }
 
 
@@ -914,7 +925,7 @@ hr {
     }
     #myCarousel2 .owl-carousel {
         position: absolute;
-        top: 0;
+        top: -10vh;
         left: -70%;
         transform: rotate(-90deg) scale(1.25);
         transform-origin: right bottom;
@@ -963,6 +974,10 @@ hr {
     }
 }
 @media(max-width:600px){
+    #myCarousel .owl-carousel .owl-item .imgbox{
+        width: 250px;
+        max-width: 100%;
+    }
     #myCarousel .carousel p{
         display: none;
     }
