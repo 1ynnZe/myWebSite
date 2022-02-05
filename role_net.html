@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="navbar role">
                     <a href="./index.html" class="navbar-logo" style="background-image: url('./img/logo.png');"></a>
-                    <h2 class="role-title"> 原創角色/安內特．福爾摩沙</h2>
+                    <h2 class="role-title"> 角色設計/安內特．福爾摩沙</h2>
 
                 </div>
                 <a href="./index.html" class="navbar__logo"></a>
@@ -121,7 +121,7 @@
 
                 </div>
                 <div class="col-lg-9">
-                    <img src="./img/net_head.jpg" class="role" alt="">
+                    <img src="./img/net_head.jpg" class="role" style="cursor: auto;" alt="">
                 </div>
             </div>
 
@@ -239,52 +239,6 @@
 
 
 
-    <script>
-
-        var div1 = document.getElementById('bar-block')
-        var parent = document.getElementById('parentBar')
-        var glass = document.getElementById('glass')
-        //拖曳
-        div1.onmousedown = function (ev) {
-            var oEv = ev || event//ie用event，其他瀏覽器要傳參數
-            //先求出鼠標到div1間的距離，而這距離是要一直保持不變
-            disY = oEv.clientY - div1.offsetTop
-
-            //也能用div1.onmousemove但這樣拖的快時或div太小，鼠標跑出div時就拖不動
-            document.onmousemove = function (ev) {
-                var oEv = ev || event//ie用event，其他瀏覽器要傳參數
-                var t = oEv.clientY - disY
-                //阻止拖出視窗外
-                if (t < 0) {
-                    t = 0
-                }
-                else if (t > parent.offsetHeight - div1.offsetHeight) {
-                    t = parent.clientHeight - div1.offsetHeight
-                }
-                //鼠標移動跟著動    
-                div1.style.top = t + 'px'
-                //紀錄拖曳變為比例
-                var scale = t / (parent.offsetHeight - div1.offsetHeight)
-                //所以scale就是0~1間 
-                var scaleInt = Math.round(100 * scale)
-                console.log(scaleInt)
-                glass.style.height = 100 - scaleInt + "%"
-                console.log(glass.style.height)
-                glass.classList.add('noword')
-
-            }
-
-            document.onmouseup = function () {
-                document.onmousemove = null
-                document.onmouseup = null
-                glass.classList.remove('noword')
-
-            }
-            return false//在mousedown裡阻止火狐拖曳的bug(如果div1內是空的就會有bug)
-
-        }
-
-    </script>
 </body>
 
 </html>
