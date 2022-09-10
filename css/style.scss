@@ -1,25 +1,24 @@
-
 /*--------loading 開始--------*/
 /*--------loading 結束--------*/
 /*--------側邊選單 開始--------*/
 /*--------側邊選單 結束--------*/
 /*--------header 開始--------*/
-    /*menu-toggle*/
-    /*popup-nav*/
-    /*popup-close*/
+/*menu-toggle*/
+/*popup-nav*/
+/*popup-close*/
 /*--------header 結束--------*/
 /*--------主視覺 開始--------*/
-    /*--------裝飾線line左上右下/linetwo右上左下 開始--------*/
-    /*--------裝飾線line左上右下/linetwo右上左下 結束--------*/
-    /*RWD側邊選單side-nav/主視覺選單navbar-nav--------*/
+/*--------裝飾線line左上右下/linetwo右上左下 開始--------*/
+/*--------裝飾線line左上右下/linetwo右上左下 結束--------*/
+/*RWD側邊選單side-nav/主視覺選單navbar-nav--------*/
 /*--------主視覺 結束--------*/
 /*--------關於我 開始--------*/
 /*--------關於我 結束--------*/
 /*--------插圖 開始--------*/
 /*--------插圖 結束--------*/
 /*--------原動畫 開始--------*/
-    /*--------瀑布流--------*/
-    /*--------fancybox--------*/
+/*--------瀑布流--------*/
+/*--------fancybox--------*/
 /*--------原動畫 結束--------*/
 /*--------平面設計 開始--------*/
 /*--------平面設計 結束--------*/
@@ -27,124 +26,147 @@
 /*--------footer 結束--------*/
 /*--------聯絡我modal--------*/
 /*--------關於我頁面 開始--------*/
-    /*拉bar*/
-    /*專業技能*/
-    /*程式技能*/
+/*拉bar*/
+/*專業技能*/
+/*程式技能*/
 /*--------關於我頁面 結束--------*/
 /*--------角色 開始--------*/
-    /*border*/
-    /*footer-role*/
+/*border*/
+/*footer-role*/
 /*--------角色 結束--------*/
 /*不想長大*/
 @import url(../css/bootstrap.css);
-$ColorPrime:#46bebd;
-$ColorSec:#e8e8e8;
-$ColorDarkprime:#263943;
-$ColorPrimelinear:linear-gradient(to bottom, #bbe9f5 ,#5fc6c6);
-$ColorPrimelinear2:linear-gradient(to top, #bbe9f5 ,#5fc6c6);
-$ColorDarkPrimelinear:linear-gradient(to bottom, #263943 ,#5998b1);
-$ColorDarkPrimelinear2:linear-gradient(to bottom, #3c708b ,#88c7e0);
+$ColorPrime: #46bebd;
+$ColorSec: #e8e8e8;
+$ColorDarkprime: #263943;
+$ColorPrimelinear: linear-gradient(to bottom, #bbe9f5, #5fc6c6);
+$ColorPrimelinear2: linear-gradient(to top, #bbe9f5, #5fc6c6);
+$ColorDarkPrimelinear: linear-gradient(to bottom, #263943, #5998b1);
+$ColorDarkPrimelinear2: linear-gradient(to bottom, #3c708b, #88c7e0);
 
-@mixin poa($t:50%,$l:50%){
+@mixin poa($t: 50%, $l: 50%) {
     position: absolute;
-    top:$t;
+    top: $t;
     left: $l;
-    transform:translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-@mixin poa0($b:0%,$l:0%){
+
+@mixin poa0($b: 0%, $l: 0%) {
     position: absolute;
-    bottom:$b;
+    bottom: $b;
     left: $l;
-    transform:translate(0%,0%);
+    transform: translate(0%, 0%);
 }
-@mixin bdrs($b:15px){
-    border-radius:$b ;
+
+@mixin bdrs($b: 15px) {
+    border-radius: $b ;
 }
+
 /*Noto Sans TC*/
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional');
 
-a{
-	color: inherit;
+a {
+    color: inherit;
 }
-a:hover{
-	text-decoration: none;
-	color: inherit;
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
 }
-*{
+
+* {
     position: relative;
     box-sizing: border-box;
     // overflow-x: hidden;
 }
-body,html{
-    margin:0;
+
+body,
+html {
+    margin: 0;
     padding: 0;
     height: 100%;
     max-width: 100vw;
     overflow-x: hidden;
 }
-ul{list-style: none;}
-body{
-	font-family: 'Noto Sans TC', sans-serif;
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
     color: #999;
     letter-spacing: 0.2rem;
     background-color: $ColorSec;
 
 }
+
 hr {
-    border-color: rgba(0,0,0,0.1)!important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
     width: calc(100% - 3.5rem);
     margin: .5rem 0 .5rem 1rem;
 }
-.wrapper{
+
+.wrapper {
     background-color: $ColorSec;
 }
-.body-container{
+
+.body-container {
     padding-top: 65px;
     width: 100%;
     overflow-x: hidden;
 }
 
-.dark-bg{
+.dark-bg {
     background-color: $ColorDarkprime;
-    
+
 }
-.darklinear-bg{
+
+.darklinear-bg {
     background: $ColorDarkPrimelinear;
-    
+
 }
-.color-prime{
+
+.color-prime {
     color: $ColorPrime;
 }
-.color-sec{
+
+.color-sec {
     color: $ColorSec;
 }
-.flex-center{
+
+.flex-center {
     display: flex;
-    justify-content: center;   
-   
+    justify-content: center;
+
 }
 
 
-.poa{
+.poa {
     @include poa;
 }
-.title{
+
+.title {
     -webkit-writing-mode: vertical-lr;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-lr;
     color: $ColorPrime;
-    text-shadow: 0 0 4px rgba(0,0,0,0.2);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
-.title span{
+
+.title span {
     writing-mode: horizontal-tb;
 
 }
-.vr-text{
+
+.vr-text {
     -webkit-writing-mode: vertical-lr;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-lr;
 }
-.btn:focus,.btn:active{
+
+.btn:focus,
+.btn:active {
     outline: none;
     box-shadow: none;
     border: none;
@@ -154,67 +176,71 @@ hr {
 
 
 
-#fullpage .section{
+#fullpage .section {
     display: table;
     table-layout: fixed;
     width: 100%;
 }
 
 /*--------loading 開始--------*/
-.preloader{
+.preloader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  /*   background-color: $ColorDarkprime; */
-    transition:1s;
+    /*   background-color: $ColorDarkprime; */
+    transition: 1s;
     z-index: 10000;
-  }
-  .preloader:before{
-    content:"";
+}
+
+.preloader:before {
+    content: "";
     position: absolute;
     left: 0;
     width: 50%;
     height: 100%;
     background: $ColorDarkprime;
-    transition:1s; 
-  }
-  .preloader.complete:before{ 
-    left: -50%;   
+    transition: 1s;
+}
+
+.preloader.complete:before {
+    left: -50%;
     transform: rotateY(45deg);
-   
-  }
-  .preloader:after{
-    content:"";
+
+}
+
+.preloader:after {
+    content: "";
     position: absolute;
     right: 0;
     width: 50%;
     height: 100%;
     background: $ColorDarkprime;
-    transition:1s; 
-  }
-  .preloader.complete:after{
-    right: -50%;   
+    transition: 1s;
+}
+
+.preloader.complete:after {
+    right: -50%;
     transform: rotateY(-45deg);
 
-  }
-  
-  .loader{
+}
+
+.loader {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 40px;
     height: 40px;
     border: 3px solid $ColorPrime;
-    animation:animate 2s linear infinite;
+    animation: animate 2s linear infinite;
     z-index: 2000;
-    
-  }
-  
-  .loader:before{
-    content:"";
+
+}
+
+.loader:before {
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -222,65 +248,76 @@ hr {
     right: 0;
     background-color: $ColorPrime;
     animation: animateBg 2s linear infinite;
-  
-  }
-  .preloader.complete{
+
+}
+
+.preloader.complete {
     opacity: 0;
-    visibility:hidden;
-    pointer-events:none;
+    visibility: hidden;
+    pointer-events: none;
     perspective: 500;
 
-  }
-  @keyframes animate{
-    0%{
-        transform:translate(-50%,-50%) rotate(0deg);
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
     }
-     25%{
-        transform:translate(-50%,-50%) rotate(180deg);
+
+    25% {
+        transform: translate(-50%, -50%) rotate(180deg);
     }
-     50%{
-        transform:translate(-50%,-50%) rotate(180deg);
+
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg);
     }
-     75%{
-        transform:translate(-50%,-50%) rotate(360deg);
+
+    75% {
+        transform: translate(-50%, -50%) rotate(360deg);
     }
-     100%{
-        transform:translate(-50%,-50%) rotate(0deg);
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
     }
-  }
-  
-  @keyframes animateBg{
-    0%{
-       height: 0;
-    }
-     25%{
+}
+
+@keyframes animateBg {
+    0% {
         height: 0;
     }
-     50%{
+
+    25% {
+        height: 0;
+    }
+
+    50% {
         height: 100%;
     }
-     75%{
-       height: 100%;
+
+    75% {
+        height: 100%;
     }
-     100%{
-       height: 0;
+
+    100% {
+        height: 0;
     }
-  }
+}
 
 
 
-  .preloader img{
+.preloader img {
     @include poa;
     z-index: 1200;
     max-width: 500px;
-  }
+}
+
 /*--------loading 結束--------*/
 /*--------側邊選單 開始--------*/
 
-.side-nav{
-	position: fixed;
-	right: .5rem;
-	top: 65%;
+.side-nav {
+    position: fixed;
+    right: .5rem;
+    top: 65%;
     display: flex;
     text-align: left;
     -webkit-writing-mode: vertical-lr;
@@ -290,122 +327,136 @@ hr {
     z-index: 50;
     align-items: flex-end;
 }
-@media (max-width:992px){
-    .side-nav{      
+
+@media (max-width:992px) {
+    .side-nav {
         display: none;
     }
-    
+
 }
 
-  
-.side-nav img{
+
+.side-nav img {
     width: 152px;
     height: auto;
     margin-bottom: 6px;
 }
-.side-nav li a{
-	display: inline-block;
-	background-color: #fff;
-	margin-right: .5rem;
-	padding: .5rem .25rem;
+
+.side-nav li a {
+    display: inline-block;
+    background-color: #fff;
+    margin-right: .5rem;
+    padding: .5rem .25rem;
     color: $ColorPrime;
     font-size: 1rem;
-	white-space: nowrap;
-	height: auto;
-	transition: all .3s;
+    white-space: nowrap;
+    height: auto;
+    transition: all .3s;
 }
-.side-nav .active a,.side-nav li a:hover {
-	background-color: $ColorPrime;
-    color:  #fff;
-    box-shadow: 0 0 8px rgba($ColorPrime,0.8);
-	
-}
+
+.side-nav .active a,
 .side-nav li a:hover {
-	padding-top: 2rem;
-	opacity: .8
+    background-color: $ColorPrime;
+    color: #fff;
+    box-shadow: 0 0 8px rgba($ColorPrime, 0.8);
+
+}
+
+.side-nav li a:hover {
+    padding-top: 2rem;
+    opacity: .8
 }
 
 /*--------側邊選單 結束--------*/
 /*--------header 開始--------*/
 
-.header{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 50;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
 
 }
-.navbar-logo{
-	display: inline-block;
-	width: 140px;
-	height: 45px;
 
-	background-position: center;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+.navbar-logo {
+    display: inline-block;
+    width: 140px;
+    height: 45px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 /*menu-toggle*/
-.menu-toggle{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 56px;
-	height: 56px;
-	display: inline-block;
-	padding: 12px;
-	padding-top: 16px;
+.menu-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 56px;
+    height: 56px;
+    display: inline-block;
+    padding: 12px;
+    padding-top: 16px;
 }
-@media (min-width: 600px){
-	.menu-toggle{
-		display: none;
-	}
+
+@media (min-width: 600px) {
+    .menu-toggle {
+        display: none;
+    }
 }
-.menu-toggle span{
-	display: block;
-	width: 100%;
-	height: 2px;
-	background-color: $ColorPrime;
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $ColorPrime;
     margin-bottom: 8px;
 
 }
+
 /*popup-nav*/
-.popup-nav .nav__menu{
+.popup-nav .nav__menu {
     display: none;
 
 }
-@media (max-width: 600px){
-	.popup-nav{
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: #1c1c1c;
-		opacity: 0;
-		visibility: hidden;
-		transition: all 0.3s;
+
+@media (max-width: 600px) {
+    .popup-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1c1c1c;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
     }
-    #overlay{
+
+    #overlay {
         z-index: 200;
     }
-	#overlay:target{
-		opacity: 1;
-		visibility: visible;
-	}
-	.popup-nav .nav__menu{
-        padding-top: 56px; 
+
+    #overlay:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popup-nav .nav__menu {
+        padding-top: 56px;
         display: flex;
         width: 100%;
         justify-content: center;
         align-items: start;
-	}
-	.popup-nav .nav__menu li{
+    }
+
+    .popup-nav .nav__menu li {
         background-color: #fff;
         color: $ColorPrime;
-        padding: 12px 6px ;
+        padding: 12px 6px;
         margin-right: 6px;
         margin-left: 6px;
         -webkit-writing-mode: vertical-lr;
@@ -414,132 +465,169 @@ hr {
         max-height: 288px;
         transition: all .3s;
     }
-    .popup-nav .nav__menu li.logo{
+
+    .popup-nav .nav__menu li.logo {
         width: 50px;
         height: auto;
         background-color: transparent;
         padding: 0;
     }
-    .popup-nav .nav__menu li:hover{
+
+    .popup-nav .nav__menu li:hover {
         background-color: $ColorPrime;
-        color:  #fff;
-        box-shadow: 0 0 8px rgba($ColorPrime,0.8);
+        color: #fff;
+        box-shadow: 0 0 8px rgba($ColorPrime, 0.8);
         padding-top: 2rem;
     }
-    .popup-nav .nav__menu li.logo:hover{
-        box-shadow: 0 0 8px rgba(White,0.8);
+
+    .popup-nav .nav__menu li.logo:hover {
+        box-shadow: 0 0 8px rgba(White, 0.8);
         background-color: #fff;
         padding-top: 0;
 
     }
-	/*popup-close*/
-	.popup-close{
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 56px;
-		height: 56px;
-		display: inline-block;
-		padding: 12px;
-		padding-top: 16px;
-	}
-	.popup-close span{
-		height: 3px;
-		width: 32px;
-		background-color:$ColorPrime;;
-		position: absolute;
-		top: 50%;
-	}
-	.popup-close span:nth-child(1){
-		transform: translateY(-50%) rotate(45deg);
-	}
-	.popup-close span:nth-child(2){
-		transform: translateY(-50%) rotate(-45deg);
-	}
+
+    /*popup-close*/
+    .popup-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 56px;
+        height: 56px;
+        display: inline-block;
+        padding: 12px;
+        padding-top: 16px;
+    }
+
+    .popup-close span {
+        height: 3px;
+        width: 32px;
+        background-color: $ColorPrime;
+        ;
+        position: absolute;
+        top: 50%;
+    }
+
+    .popup-close span:nth-child(1) {
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .popup-close span:nth-child(2) {
+        transform: translateY(-50%) rotate(-45deg);
+    }
 }
+
 /*--------header 結束--------*/
 
 /*--------主視覺 開始--------*/
-.navbar-nav{
-    @include poa(140%,50%);
+.navbar-nav {
+    @include poa(140%, 50%);
     z-index: 10;
 }
-.navbar-nav .menu{
-     -webkit-writing-mode: vertical-rl;
+
+.navbar-nav .menu {
+    -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
 }
-.navbar-nav .menu li{
+
+.navbar-nav .menu li {
     margin-right: 1.5rem;
 }
-.navbar-nav .menu li:first-child{
-	margin-right: 0;
+
+.navbar-nav .menu li:first-child {
+    margin-right: 0;
 }
-.navbar-nav .menu a{
+
+.navbar-nav .menu a {
     display: block;
-	background-color: rgba(255,255,255,0.8);	
-	padding:1rem .5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem .5rem;
     font-size: 18px;
     transition: all .5s;
 }
-.navbar-nav .menu a:hover{
+
+.navbar-nav .menu a:hover {
     background-color: $ColorPrime;
     color: #fff;
     padding-bottom: 12rem;
-    box-shadow: 0 0 10px rgba($ColorPrime,0.8);
+    box-shadow: 0 0 10px rgba($ColorPrime, 0.8);
 
 }
 
-.slogan{
+.slogan {
     position: relative;
     left: 85%;
-    top: -12rem;
-	 -webkit-writing-mode: vertical-lr;
+    top: 0;
+    transform: translateY(-50%);
+    -webkit-writing-mode: vertical-lr;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-lr;
-    text-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
     z-index: 2;
-    letter-spacing:.8rem;
+    letter-spacing: .8rem;
 }
-.slogan-left{
+
+.slogan-left {
     position: absolute;
     left: -60%;
     top: 20%;
 }
-.bg-box{
-    @include poa(140%,20%);
+
+.bg-box {
+    @include poa(140%, 20%);
     width: 250px;
     height: 250px;
     background: $ColorPrimelinear;
 }
-.banner{
-    @include poa(30%,50%);
+
+.banner {
+    @include poa(30%, 50%);
     width: 800px;
     height: auto;
     z-index: 1;
     max-width: 100%;
 }
 
-.scrollDown-btn{
+.scrollDown-btn {
     width: 1px;
     height: 400px;
     background-color: #fff;
-    @include poa(100%,20%);
+    @include poa(100%, 20%);
     z-index: 4;
     transform: rotate(-45deg);
     animation: breath 3s infinite;
     opacity: 0.4;
 }
-@keyframes breath{
-    0%{opacity: 0.4;height: 300px; @include poa(100%,20%);transform: rotate(-45deg);}
-    50%{opacity: 0.6;height: 400px; @include poa(110%,25%);transform: rotate(-45deg);}
-    100%{opacity: 0.4;height: 300px; @include poa(100%,20%);transform: rotate(-45deg);}
+
+@keyframes breath {
+    0% {
+        opacity: 0.4;
+        height: 300px;
+        @include poa(100%, 20%);
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        opacity: 0.6;
+        height: 400px;
+        @include poa(110%, 25%);
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        opacity: 0.4;
+        height: 300px;
+        @include poa(100%, 20%);
+        transform: rotate(-45deg);
+    }
 }
+
 /*--------裝飾線line左上右下/linetwo右上左下 開始--------*/
 
-@media(min-width:992px){
-    .line{
+@media(min-width:992px) {
+    .line {
         position: absolute;
         width: 1px;
         height: 300px;
@@ -550,7 +638,8 @@ hr {
         transform: rotate(-45deg);
         opacity: 0.4;
     }
-    .line-2{
+
+    .line-2 {
         position: absolute;
         width: 1px;
         height: 200px;
@@ -561,7 +650,8 @@ hr {
         transform: rotate(-45deg);
         opacity: 0.4;
     }
-    .line-3{
+
+    .line-3 {
         position: absolute;
         width: 1px;
         height: 350px;
@@ -572,7 +662,8 @@ hr {
         transform: rotate(-45deg);
         opacity: 1;
     }
-    .line-4{
+
+    .line-4 {
         position: absolute;
         width: 1px;
         height: 350px;
@@ -583,7 +674,8 @@ hr {
         transform: rotate(-45deg);
         opacity: 0.9;
     }
-    .line-5{
+
+    .line-5 {
         position: absolute;
         width: 1px;
         height: 200px;
@@ -594,7 +686,8 @@ hr {
         transform: rotate(-45deg);
         opacity: 0.9;
     }
-    .linetwo{
+
+    .linetwo {
         position: absolute;
         width: 1px;
         height: 300px;
@@ -605,7 +698,8 @@ hr {
         transform: rotate(45deg);
         opacity: 0.4;
     }
-    .linetwo-2{
+
+    .linetwo-2 {
         position: absolute;
         width: 1px;
         height: 300px;
@@ -616,7 +710,8 @@ hr {
         transform: rotate(45deg);
         opacity: 0.6;
     }
-    .linetwo-3{
+
+    .linetwo-3 {
         position: absolute;
         width: 1px;
         height: 450px;
@@ -627,7 +722,8 @@ hr {
         transform: rotate(45deg);
         opacity: 0.8;
     }
-    .linetwo-4{
+
+    .linetwo-4 {
         position: absolute;
         width: 1px;
         height: 350px;
@@ -638,7 +734,8 @@ hr {
         transform: rotate(45deg);
         opacity: 0.8;
     }
-    .linetwo-5{
+
+    .linetwo-5 {
         position: absolute;
         width: 1px;
         height: 200px;
@@ -649,7 +746,8 @@ hr {
         transform: rotate(45deg);
         opacity: 0.8;
     }
-    .linetwo-6{
+
+    .linetwo-6 {
         position: absolute;
         width: 1px;
         height: 200px;
@@ -660,7 +758,8 @@ hr {
         transform: rotate(45deg);
         opacity: 0.8;
     }
-    .linetwo-7{
+
+    .linetwo-7 {
         position: absolute;
         width: 1px;
         height: 400px;
@@ -671,7 +770,8 @@ hr {
         transform: rotate(45deg);
         opacity: 0.8;
     }
-    .linetwo-8{
+
+    .linetwo-8 {
         position: absolute;
         width: 1px;
         height: 300px;
@@ -682,21 +782,23 @@ hr {
         transform: rotate(45deg);
         opacity: 0.8;
     }
-    
+
 }
+
 /*--------裝飾線line左上右下/linetwo右上左下 結束--------*/
 
 /*RWD側邊選單side-nav/主視覺選單navbar-nav--------*/
 
-.side-nav li:last-child a{
+.side-nav li:last-child a {
     margin-right: 0;
 }
-@media (max-width:600px){
-    .side-nav img{
+
+@media (max-width:600px) {
+    .side-nav img {
         width: 130px;
     }
-    
-    .side-nav li a{
+
+    .side-nav li a {
         display: inline-block;
         background-color: #fff;
         margin-right: .5rem;
@@ -704,34 +806,39 @@ hr {
         color: $ColorPrime;
         font-size: 12px;
     }
-    
-    .navbar-nav{
+
+    .navbar-nav {
         position: absolute;
         top: 25vh;
         left: 50%;
         transform: translatex(-50%);
-       
+
     }
-    .navbar-nav .menu li{
+
+    .navbar-nav .menu li {
         margin-right: .5rem;
     }
-    .navbar-nav .menu a{
+
+    .navbar-nav .menu a {
         display: block;
-        background-color: #fff;	
-        padding:1rem 5px;
+        background-color: #fff;
+        padding: 1rem 5px;
         font-size: 12px;
         transition: all .5s;
     }
-    .slogan{
+
+    .slogan {
         position: absolute;
         top: -16rem;
-        letter-spacing:.25rem;
+        letter-spacing: .25rem;
     }
-    .slogan h2{
+
+    .slogan h2 {
         font-size: 1rem;
     }
-    .banner{
-        @include poa(70%,50%);
+
+    .banner {
+        @include poa(70%, 50%);
         z-index: 1;
         max-width: 100%;
     }
@@ -741,89 +848,103 @@ hr {
 
 /*--------主視覺 結束--------*/
 /*--------關於我 開始--------*/
-.a-img a{
+.a-img a {
     display: block;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;   
+    background-size: cover;
     width: 170px;
-    height:400px;
-    box-shadow: 0 -1px 4px rgba($ColorDarkprime,0.2);
+    height: 400px;
+    box-shadow: 0 -1px 4px rgba($ColorDarkprime, 0.2);
     position: relative;
-   
+
 
 }
-.a-img .imgbox{transition: all .3s;}
 
-.a-img .imgbox:hover{
-    opacity: 1!important;
-    mask-image: linear-gradient(top, rgba(0,0,0,1)70%, rgba(0,0,0,0.3));
+.a-img .imgbox {
+    transition: all .3s;
 }
-.a-content{ 
+
+.a-img .imgbox:hover {
+    opacity: 1 !important;
+    mask-image: linear-gradient(top, rgba(0, 0, 0, 1)70%, rgba(0, 0, 0, 0.3));
+}
+
+.a-content {
     -webkit-writing-mode: vertical-lr;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-lr;
     max-height: 400px;
-   padding-top: 1rem;
+    padding-top: 1rem;
 }
 
-.a-content .title{   
-   color: $ColorPrime;
-   padding: 0;
-   margin: 0;
+.a-content .title {
+    color: $ColorPrime;
+    padding: 0;
+    margin: 0;
 }
-.a-content p{
+
+.a-content p {
     color: #fff;
 }
-.a-bg{
+
+.a-bg {
     background-color: $ColorDarkprime;
     width: 100%;
     z-index: 0;
     height: 600px;
-     @include poa0;
-  
+    @include poa0;
+
 }
-@media(min-width:576px){
-    .a-content{
+
+@media(min-width:576px) {
+    .a-content {
         max-width: 190px;
-    }      
-    
+    }
+
 }
-@media(max-width:576px) and (min-width:380px){  
-    .a-img,.a-content{
+
+@media(max-width:576px) and (min-width:380px) {
+
+    .a-img,
+    .a-content {
         display: flex;
         justify-content: center;
     }
 }
 
-@media (max-width:1200px){
-    .a-bg{
-        height: 860px;    
-        }
+@media (max-width:1200px) {
+    .a-bg {
+        height: 860px;
+    }
 }
-@media (max-width:992px){
-    .f-sm-center{      
+
+@media (max-width:992px) {
+    .f-sm-center {
         display: flex;
         justify-content: center;
     }
-    .a-bg{
-    height: 100%;
+
+    .a-bg {
+        height: 100%;
 
     }
 }
 
 
-.about-box{
+.about-box {
     position: absolute;
     @include poa;
     display: flex;
     flex-direction: column;
 }
-.about-box img{
-   width: 100%;
-   max-width: 122px;
+
+.about-box img {
+    width: 100%;
+    max-width: 122px;
 }
-.btn-prime{
+
+.btn-prime {
     background-color: #fff;
     @include bdrs;
     color: $ColorPrime;
@@ -831,98 +952,116 @@ hr {
     user-select: none;
     cursor: pointer;
 }
-.btn-prime:hover{
+
+.btn-prime:hover {
     color: #fff;
     background-color: $ColorPrime;
-    box-shadow: 0 0 8px rgba($ColorPrime,0.8);
+    box-shadow: 0 0 8px rgba($ColorPrime, 0.8);
 }
+
 /*--------關於我 結束--------*/
 
 /*--------插圖 開始--------*/
-.owl-carousel button.owl-dot.active,.owl-carousel button.owl-dot{
+.owl-carousel button.owl-dot.active,
+.owl-carousel button.owl-dot {
     transition: all .3s;
 }
-.owl-carousel button:focus{
+
+.owl-carousel button:focus {
     outline: none;
     @include bdrs(0px);
 }
-.owl-carousel button.owl-dot.active{
-    background-color:rgba($ColorPrime,1)!important;
-  }
-  .owl-carousel button.owl-dot:not(.active):hover{
-    background-color:rgba($ColorPrime,0.7)!important;
 
-  }
-#myCarousel .owl-carousel .owl-dots,#myCarousel2 .owl-carousel .owl-dots{
-    top: 0;
-    position: absolute;      
-    left: calc(100% - 2rem - 6px);
-    max-width: 10px;  
+.owl-carousel button.owl-dot.active {
+    background-color: rgba($ColorPrime, 1) !important;
 }
-#myCarousel2 .item .imgbox{
+
+.owl-carousel button.owl-dot:not(.active):hover {
+    background-color: rgba($ColorPrime, 0.7) !important;
+
+}
+
+#myCarousel .owl-carousel .owl-dots,
+#myCarousel2 .owl-carousel .owl-dots {
+    top: 0;
+    position: absolute;
+    left: calc(100% - 2rem - 6px);
+    max-width: 10px;
+}
+
+#myCarousel2 .item .imgbox {
     @include bdrs(50%);
     transform-origin: center;
     transform: rotate(90deg);
 }
-#myCarousel .owl-carousel button.owl-dot,#myCarousel2 .owl-carousel button{
+
+#myCarousel .owl-carousel button.owl-dot,
+#myCarousel2 .owl-carousel button {
     height: 40px;
     width: 7px;
     border: 1px solid $ColorPrime;
     margin: 4px 0;
-    background-color:rgba($ColorPrime,0.4);   
+    background-color: rgba($ColorPrime, 0.4);
 }
-#myCarousel .owl-carousel .owl-item .imgbox{
+
+#myCarousel .owl-carousel .owl-item .imgbox {
     @include bdrs;
     border: .5rem solid #fff;
     width: calc(100% - 4rem - 6px);
 
 }
-#myCarousel .owl-carousel .owl-item .imgbox img{
+
+#myCarousel .owl-carousel .owl-item .imgbox img {
     @include bdrs;
 
 }
-#myCarousel .carousel .owl-stage-outer{
+
+#myCarousel .carousel .owl-stage-outer {
     position: relative;
 }
-#myCarousel .carousel p{
-  background-color: rgba($ColorSec,0.8);
-  padding: 4px 0;
-  @include bdrs(4px);
+
+#myCarousel .carousel p {
+    background-color: rgba($ColorSec, 0.8);
+    padding: 4px 0;
+    @include bdrs(4px);
 }
 
-#myCarousel2 .item{
+#myCarousel2 .item {
     padding: 0 6px;
     // max-width: 120px;
 }
-#myCarousel2 .item .imgbox{
+
+#myCarousel2 .item .imgbox {
     cursor: pointer;
     transform: rotate(90deg);
 }
 
 
-@media(min-width:768px){
-    #myCarousel .carousel .title{
+@media(min-width:768px) {
+    #myCarousel .carousel .title {
         margin-left: calc(-5rem + 6px);
     }
-    #myCarousel .carousel p{
+
+    #myCarousel .carousel p {
         display: block;
         position: absolute;
         top: calc(2.5rem * 4);
         right: 0;
     }
-   
-    #myCarousel .owl-carousel .owl-dots{
+
+    #myCarousel .owl-carousel .owl-dots {
         top: 70%;
- 
+
     }
-    
-    #myCarousel2 .carousel{
+
+    #myCarousel2 .carousel {
         position: relative;
     }
 
-    #myCarousel2 .title{
+    #myCarousel2 .title {
         margin-left: calc(50% - 2rem);
     }
+
     #myCarousel2 .owl-carousel {
         position: absolute;
         top: -10vh;
@@ -931,167 +1070,185 @@ hr {
         transform-origin: right bottom;
         margin: 10px;
     }
-    #myCarousel2 .item .imgbox{
+
+    #myCarousel2 .item .imgbox {
         transform-origin: center;
-        transform: rotate(90deg);      
-    
+        transform: rotate(90deg);
+
     }
-    #myCarousel2 .owl-carousel .owl-dots{
-        transform: rotate(90deg) translate(-100%,-50%) scale(0.8);
+
+    #myCarousel2 .owl-carousel .owl-dots {
+        transform: rotate(90deg) translate(-100%, -50%) scale(0.8);
         position: absolute;
         left: 30%;
         top: 100%;
-        
+
     }
 }
 
-@media(max-width:600px){  
-    #myCarousel .carousel p{
+@media(max-width:600px) {
+    #myCarousel .carousel p {
         position: absolute;
         right: 0;
         display: block;
         top: 50%
-      
     }
-    #myCarousel .carousel .title{
+
+    #myCarousel .carousel .title {
         position: absolute;
-         right: 2rem;
-         z-index: 2;
-     }  
-    #myCarousel2 .owl-carousel .owl-dots{
+        right: 2rem;
+        z-index: 2;
+    }
+
+    #myCarousel2 .owl-carousel .owl-dots {
         position: relative;
         transform: rotate(90deg);
-       margin: auto 0;
+        margin: auto 0;
     }
-  
+
     #myCarousel2 .owl-carousel {
         transform: rotate(-90deg);
-        width: calc(181px * 2 );
+        width: calc(181px * 2);
         margin: auto;
         margin-left: 2.5rem;
         top: -200px;
-        
+
     }
 }
-@media(max-width:600px){
-    #myCarousel .owl-carousel .owl-item .imgbox{
+
+@media(max-width:600px) {
+    #myCarousel .owl-carousel .owl-item .imgbox {
         width: 250px;
         max-width: 100%;
     }
-    #myCarousel .carousel p{
+
+    #myCarousel .carousel p {
         display: none;
     }
 }
+
 /*--------插圖 結束--------*/
 
 /*--------原動畫 開始--------*/
 
-.ani.title{
+.ani.title {
     margin-top: -1rem;
     right: 8rem;
 }
 
-.ani .btn{
+.ani .btn {
     @include poa;
 }
-@media(max-width:992px){
-    .ani.title{
+
+@media(max-width:992px) {
+    .ani.title {
         margin-top: 0rem;
         right: 0;
     }
-    
-    .ani .btn{
-        
-       transform: translate(-50%,-70%);
+
+    .ani .btn {
+
+        transform: translate(-50%, -70%);
     }
 }
+
 /*--------瀑布流--------*/
 
-.masonry img,.masonry video{
+.masonry img,
+.masonry video {
     width: 100%;
     height: auto;
     @include bdrs;
-    box-shadow: 0 2px 4px rgba($ColorDarkprime,0.2);
+    box-shadow: 0 2px 4px rgba($ColorDarkprime, 0.2);
 
 }
-.masonry .item{
+
+.masonry .item {
     padding: 6px;
 }
-@media(min-width:1200px){
-    .bg-box.masonry-bg-box{
+
+@media(min-width:1200px) {
+    .bg-box.masonry-bg-box {
         background: $ColorPrimelinear2;
         position: absolute;
-        top: -10%;   
+        top: -10%;
         left: -40%;
         height: 100%;
         width: 80%;
         z-index: 0;
         transform: rotate(45deg);
-        box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
         overflow: hidden;
-     
-     }
-    .bg-box.masonry-bg-box2{
-           background: $ColorDarkPrimelinear2;
-           position: absolute;
-           top: 30%;   
-           left: 100%;
-           height: 100%;
-           width: 100%;
-           box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
-           z-index: 0;
+
+    }
+
+    .bg-box.masonry-bg-box2 {
+        background: $ColorDarkPrimelinear2;
+        position: absolute;
+        top: 30%;
+        left: 100%;
+        height: 100%;
+        width: 100%;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 0;
     }
 }
 
-@media(max-width:1200px){
-    .bg-box.masonry-bg-box{
+@media(max-width:1200px) {
+    .bg-box.masonry-bg-box {
         background: $ColorPrimelinear2;
         position: absolute;
-        top: -5%;   
+        top: -5%;
         left: 0%;
         height: calc(100% + 5%);
         width: 100%;
         z-index: 0;
         transform: rotate(0deg);
-        box-shadow: inset 0 2px 5px rgba(0,0,0,0.2); 
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
         overflow: hidden;
-     
-     }
-     .bg-box.masonry-bg-box2{
+
+    }
+
+    .bg-box.masonry-bg-box2 {
         background: $ColorDarkPrimelinear2;
         position: absolute;
         top: -10%;
         left: 20%;
         height: 100%;
         width: 100%;
-        box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 0;
         transform: rotate(45deg);
- }
+    }
 }
 
 
-.imgbox{
+.imgbox {
     max-width: 100%;
     transition: all .5s;
 }
-.ani .imgbox{
+
+.ani .imgbox {
     border: 1px solid #fff;
 
 }
-.imgbox:hover,.owl-carousel .owl-item img:hover,.owl-carousel .owl-item img.active{
+
+.imgbox:hover,
+.owl-carousel .owl-item img:hover,
+.owl-carousel .owl-item img.active {
     opacity: 0.6;
-    box-shadow: 0 0px 8px rgba($ColorPrime,0.8);
+    box-shadow: 0 0px 8px rgba($ColorPrime, 0.8);
     border: 1px solid $ColorPrime;
-    
+
 }
-.owl-carousel .owl-item img.active{
+
+.owl-carousel .owl-item img.active {
     opacity: 0.8;
 }
 
 /*--------fancybox--------*/
 
-.fancybox-navigation{
+.fancybox-navigation {
     height: 100%;
 }
 
@@ -1099,23 +1256,25 @@ hr {
 /*--------原動畫 結束--------*/
 /*--------平面設計 開始--------*/
 
-.design.section{
-    box-shadow: inset 0 2px 20px rgba($ColorSec,0.2);
+.design.section {
+    box-shadow: inset 0 2px 20px rgba($ColorSec, 0.2);
 }
 
-.bg-box.design-bg-box{
-   background: $ColorDarkPrimelinear2;
-   position: absolute;
-   top: 0%;   
-   left: 0%;
-   height: 200px;
-   width: 200px;
-   z-index: 0;
+.bg-box.design-bg-box {
+    background: $ColorDarkPrimelinear2;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 200px;
+    width: 200px;
+    z-index: 0;
 }
+
 /*設計tab*/
-.tab-pane{
+.tab-pane {
     display: flex;
 }
+
 .design.section .bg-box {
     position: absolute;
     top: 60%;
@@ -1128,166 +1287,187 @@ hr {
     background: linear-gradient(to bottom, #bbe9f5, #5fc6c6);
 }
 
-.design.section .imgbox{
+.design.section .imgbox {
     width: 500px;
     max-width: 100%;
     height: auto;
     border: 4px solid #fff;
 }
-.design.section .tabs-left{
+
+.design.section .tabs-left {
     height: 700px;
     color: $ColorPrime;
     display: flex;
 }
-.design.section p{
+
+.design.section p {
     padding-left: 1rem;
     color: #fff;
 }
 
-@media(max-width:992px){
-    .design.section .bg-box{
+@media(max-width:992px) {
+    .design.section .bg-box {
         width: 100px;
         height: 100px;
         left: 80%;
         top: 77%;
-    } 
-    .design.section .tabs-left{
+    }
+
+    .design.section .tabs-left {
         display: block;
         width: 100%;
     }
-    .tabs-left > .nav-tabs > li > a{
-        border-radius: 0px 15px 15px 0!important;
+
+    .tabs-left>.nav-tabs>li>a {
+        border-radius: 0px 15px 15px 0 !important;
     }
-    .design.section .imgbox{
-    width: 480px
+
+    .design.section .imgbox {
+        width: 480px
     }
 }
 
-@media(max-width:768px){
-    .design.section .imgbox{
+@media(max-width:768px) {
+    .design.section .imgbox {
         width: 400px;
     }
 
 
-    .design.section p{
+    .design.section p {
         padding: .5rem;
     }
 }
 
-@media(max-width:380px){
-    .design.section .imgbox{
+@media(max-width:380px) {
+    .design.section .imgbox {
         width: 300px;
     }
 
-    .design.section p{
+    .design.section p {
         padding: .5rem;
     }
 }
 
-.tabs-left > .nav-tabs > li > a {
+.tabs-left>.nav-tabs>li>a {
     min-width: 74px;
     margin-right: 0;
     margin-bottom: 3px;
-  }
-  
-  .tabs-left > .nav-tabs {
-    border:none;
+}
+
+.tabs-left>.nav-tabs {
+    border: none;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .nav-tabs .nav-link{
+.nav-tabs .nav-link {
     color: #fff;
-    background-color: rgba($ColorSec,0.8);
+    background-color: rgba($ColorSec, 0.8);
     border: none;
-  }
+}
 
-  .tabs-left > .nav-tabs > li > a{
+.tabs-left>.nav-tabs>li>a {
     border-radius: 15px 0 0 15px;
-  }
-  .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
     color: #fff;
-    background-color: rgba($ColorPrime,0.8);
-    }
-  .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    background-color: rgba($ColorPrime, 0.8);
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
     color: $ColorPrime;
     background-color: #fff;
     border: none;
-    box-shadow: 0 0 8px rgba(White,0.8);
+    box-shadow: 0 0 8px rgba(White, 0.8);
 
 }
+
 /*--------平面設計 結束--------*/
 
 
 
 /*--------footer 開始--------*/
-.footer{
+.footer {
     background-color: #fff;
     display: flex;
     align-items: center;
 }
 
-.footer img{
+.footer img {
     width: 145px;
     height: auto;
 }
-.footer .info{
+
+.footer .info {
     color: $ColorPrime;
     display: inline-block;
     vertical-align: middle;
 }
-.footer .btn{
-   @include poa;
-   text-align: center;
+
+.footer .btn {
+    @include poa;
+    text-align: center;
 }
-@media(min-width:992px){
-    .footer .btn{
+
+@media(min-width:992px) {
+    .footer .btn {
         min-width: 106px;
     }
 }
-@media(max-width:992px){
-    .footer .btn{     
+
+@media(max-width:992px) {
+    .footer .btn {
         left: 100%;
-        transform: translate(-100%,-50%);
+        transform: translate(-100%, -50%);
         @include bdrs(50%);
         border: 1px solid $ColorPrime;
     }
-    .footer .btn .mdi-email-outline:before{
+
+    .footer .btn .mdi-email-outline:before {
         font-size: 24px;
-       
+
 
     }
 }
+
 /*--------footer 結束--------*/
 /*--------聯絡我modal--------*/
 
-.modal-title{
+.modal-title {
     color: $ColorPrime;
 }
-.modal img{
+
+.modal img {
     width: 103px;
     height: auto;
 }
-.form-control:focus{
-    box-shadow: 0 0px 8px rgba($ColorPrime,0.8);
+
+.form-control:focus {
+    box-shadow: 0 0px 8px rgba($ColorPrime, 0.8);
     border: 1px solid $ColorPrime;
-}
-.modal .btn{
-    border: 1px solid $ColorPrime;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
-.modal .btn.btn-default{
+.modal .btn {
+    border: 1px solid $ColorPrime;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal .btn.btn-default {
     color: #ccc;
     border: 1px solid #ccc;
     @include bdrs;
     box-shadow: none;
 
 }
-.modal .btn.btn-default:hover{
+
+.modal .btn.btn-default:hover {
     background-color: #ccc;
     color: #fff;
 }
+
 .modal-header .close {
     padding: 1rem 1rem;
     margin: -1rem;
@@ -1296,27 +1476,29 @@ hr {
 
 /*--------關於我頁面 開始--------*/
 
-.myPic{
+.myPic {
     border: 1px solid $ColorPrime;
     width: 300px;
     height: 100vh;
     background-position: 0;
     background-repeat: no-repeat;
     background-size: 300px;
-    background-attachment: fixed; 
+    background-attachment: fixed;
     position: absolute;
 }
-@media(max-width:992px){
-    .myPic{
+
+@media(max-width:992px) {
+    .myPic {
         position: relative;
         height: 200px;
         width: 100%;
     }
 }
-.glass{
+
+.glass {
     width: 100%;
     height: 41%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3);   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3);
     border-radius: 5px;
     position: relative;
     top: 0;
@@ -1325,6 +1507,7 @@ hr {
     background: inherit;
     overflow: hidden;
 }
+
 .glass:before {
     content: "";
     position: absolute;
@@ -1338,128 +1521,161 @@ hr {
     filter: blur(20px);
     margin: -20px;
 }
-.glass:after{
+
+.glass:after {
     content: "拖曳綠色小方塊";
+    font-size: 14px;
     color: White;
-    text-shadow: 0 0 10px rgba($ColorPrime,1);
+    text-shadow: 0 0 10px rgba($ColorPrime, 1);
     -webkit-writing-mode: vertical-lr;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-lr;
     @include poa;
-    font-weight: 900;
     animation: glassword 2s linear infinite;
     opacity: 1;
-    height:50%;
+    height: 50%;
     width: 24px;
     overflow: hidden;
 }
-.glass.noword:after{
+
+.glass.noword:after {
     content: "";
     color: White;
-    text-shadow: 0 0 10px rgba($ColorPrime,1);
+    text-shadow: 0 0 10px rgba($ColorPrime, 1);
     -webkit-writing-mode: vertical-lr;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-lr;
     @include poa;
     opacity: 1;
-    height:50%;
+    height: 50%;
     width: 24px;
 }
-@keyframes glassword{
-    0%{opacity: 1;height:50%;}
-    25%{opacity: 0.8;height:25%;}
-    50%{opacity: 0;height:0%;}
-    75%{opacity: 0.5;height:25%;}
-    100%{opacity: 1;height:50%;}
+
+@keyframes glassword {
+    0% {
+        opacity: 1;
+        height: 50%;
+    }
+
+    25% {
+        opacity: 0.8;
+        height: 25%;
+    }
+
+    50% {
+        opacity: 0;
+        height: 0%;
+    }
+
+    75% {
+        opacity: 0.5;
+        height: 25%;
+    }
+
+    100% {
+        opacity: 1;
+        height: 50%;
+    }
 }
-.about-content-outter{
+
+.about-content-outter {
     margin-left: 300px;
     display: flex;
 
 
-/*拉bar*/
-.about-content{
-    display: inline-block;  
-}
-#parentBar{
-    width: 30px;
-    min-width: 30px;
-    height: calc(100vh - 6.5rem);
-    position: relative;
-    top: 3.5rem;
-    display: inline-block;
-    border-right: 1px solid rgba(0,0,0,0.1);
-  
-  }
-  #bar-block{
-    width: 30px;
-    height: 30px;
-    background-color: $ColorPrime;
-    position: absolute;
-    box-shadow:0 2px 8px rgba(0,0,0,0.2);
-    cursor: pointer;
-    transition: all .3s;
-    top: 383px;
-  }
-  #bar-block:hover{
-    box-shadow: 0 0 8px rgba($ColorPrime,0.8);
-    background-color: #6ec1c0;;
-  }
+    /*拉bar*/
+    .about-content {
+        display: inline-block;
+    }
+
+    #parentBar {
+        width: 30px;
+        min-width: 30px;
+        height: calc(100vh - 6.5rem);
+        position: relative;
+        top: 3.5rem;
+        display: inline-block;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+    }
+
+    #bar-block {
+        width: 30px;
+        height: 30px;
+        background-color: $ColorPrime;
+        position: absolute;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: all .3s;
+        top: 383px;
+    }
+
+    #bar-block:hover {
+        box-shadow: 0 0 8px rgba($ColorPrime, 0.8);
+        background-color: #6ec1c0;
+        ;
+    }
 
 }
-@media(max-width:992px){
-    .about-content-outter{
+
+@media(max-width:992px) {
+    .about-content-outter {
         margin-left: 0;
 
-    
+
     }
-    .glass:after{
+
+    .glass:after {
         display: none;
     }
-    .about-content-outter #parentBar,#bar-block{
+
+    .about-content-outter #parentBar,
+    #bar-block {
         display: none;
     }
-    .myPic{
+
+    .myPic {
         background-size: 100%;
     }
-}  
-  /*專業技能*/
-  .listSkill {
+}
+
+/*專業技能*/
+.listSkill {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  
-  .listSkill li {
+    flex-wrap: wrap;
+}
+
+.listSkill li {
     width: 25%;
     padding: 5px;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     text-align: center;
-  }
-  
-  .circle {
+}
+
+.circle {
     width: 50px;
     height: 50px;
     border: 1px solid #699bb6;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-  }
-  
-  .circle::after {
+}
+
+.circle::after {
     content: "";
     display: block;
     background-color: $ColorSec;
@@ -1471,137 +1687,148 @@ hr {
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-  
-  .p90, .p180, .p270, .p360 {
+    transform: translate(-50%, -50%);
+}
+
+.p90,
+.p180,
+.p270,
+.p360 {
     width: 50%;
     height: 50%;
     position: absolute;
     left: 50%;
     top: 0;
     background-color: #a7eaee;
-  }
-  
-  .p180 {
+}
+
+.p180 {
     top: 50%;
-  }
-  
-  .p270 {
+}
+
+.p270 {
     left: 0;
     top: 50%;
-  }
-  
-  .p360 {
+}
+
+.p360 {
     left: 0;
     top: 0;
-  }
-  
-  /*程式技能*/
-  .listProgram .bar {
+}
+
+/*程式技能*/
+.listProgram .bar {
     width: 100%;
     height: 16px;
     border: solid 1px #699bb6;
     border-radius: 15px;
     overflow: hidden;
     background: transparent;
-  }
-  
-  .listProgram li {
+}
+
+.listProgram li {
     padding-top: 10px;
-  }
-  
-  .value {
+}
+
+.value {
     height: 100%;
     width: 60%;
     background-color: #a7eaee;
-  }
-  
-  .value.p10 {
+}
+
+.value.p10 {
     width: 10%;
-  }
-  
-  .value.p20 {
+}
+
+.value.p20 {
     width: 20%;
-  }
-  
-  .value.p30 {
+}
+
+.value.p30 {
     width: 30%;
-  }
-  
-  .value.p40 {
+}
+
+.value.p40 {
     width: 40%;
-  }
-  
-  .value.p50 {
+}
+
+.value.p50 {
     width: 50%;
-  }
-  
-  .value.p60 {
+}
+
+.value.p60 {
     width: 60%;
-  }
-  
-  .value.p70 {
+}
+
+.value.p70 {
     width: 70%;
-  }
-  
-  .value.p80 {
+}
+
+.value.p80 {
     width: 80%;
-  }
-  
-  .value.p90 {
+}
+
+.value.p90 {
     width: 90%;
-  }
-  
-  .value.p100 {
+}
+
+.value.p100 {
     width: 100%;
-  }
-  
+}
+
 
 /*--------關於我頁面 結束--------*/
 
 
 
 /*--------角色 開始--------*/
-.navbar.role{
+.navbar.role {
     color: $ColorPrime;
-    justify-content:normal
+    justify-content: normal
 }
-.navbar.role .role-title{
+
+.navbar.role .role-title {
     margin-left: 4px;
 }
-.imgbox.role-banner{
-    width:100%;
+
+.imgbox.role-banner {
+    width: 100%;
     border: 8px solid #fff;
     @include bdrs;
-    mask-image: linear-gradient(right top, rgba(0,0,0,1), rgba(0,0,0,0.2));
+    mask-image: linear-gradient(right top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
 }
-.imgbox.role-banner:hover{
+
+.imgbox.role-banner:hover {
     opacity: 1;
-    mask-image: linear-gradient(right top, rgba(0,0,0,1), rgba(0,0,0,0.8));
+    mask-image: linear-gradient(right top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8));
 }
-img.role-bg{
+
+img.role-bg {
     position: absolute;
     top: calc(65px + 200px);
     left: 0;
     width: 300px;
     max-width: 100%;
-} 
-img.role-bg.role-bg-t{
+}
+
+img.role-bg.role-bg-t {
     width: 460px;
     top: calc(65px + 300px);
 }
-img.role{
+
+img.role {
     width: 100%;
     max-width: 100%;
     cursor: pointer;
 }
-.role-card img{
+
+.role-card img {
     position: relative;
     width: 80%;
-    
+
 }
-.role-card::before{
+
+.role-card::before {
     content: "";
     position: absolute;
     width: 70%;
@@ -1611,7 +1838,8 @@ img.role{
     top: 10%;
 
 }
-.role-card::after{
+
+.role-card::after {
     content: "剛格利";
     position: absolute;
     background-color: $ColorPrime;
@@ -1625,107 +1853,120 @@ img.role{
     align-items: center;
     font-size: 17px;
 }
+
 /*border*/
-.border-top{
+.border-top {
     border-top: 16px solid #fff !important;
 }
-.border-bottom{
+
+.border-bottom {
     border-bottom: 16px solid #fff !important;
 }
-.border-left{
+
+.border-left {
     border-left: 8px solid #fff !important;
 }
-.border-right{
+
+.border-right {
     height: 80%;
     border-right: 8px solid #fff !important;
 }
 
 
 /*footer-role*/
-.footer-role{
+.footer-role {
     background-color: #fff;
 }
 
 
 
-#myCarousel3 .owl-carousel .owl-item{
-    padding:0 .5rem;
+#myCarousel3 .owl-carousel .owl-item {
+    padding: 0 .5rem;
 }
-#myCarousel3  .owl-carousel .owl-item img{
-    max-width: 100%;  
-    transition: all .3s;  
+
+#myCarousel3 .owl-carousel .owl-item img {
+    max-width: 100%;
+    transition: all .3s;
     @include bdrs(50%);
     cursor: pointer;
-  }
+}
 
-@media(min-width: 992px){
-   
-    #myCarousel3  .btn.btn-prime{      
-    position: absolute;
-    top: 0;
-    right: -1rem;
-    transform: translateX(100%);
+@media(min-width: 992px) {
+
+    #myCarousel3 .btn.btn-prime {
+        position: absolute;
+        top: 0;
+        right: -1rem;
+        transform: translateX(100%);
     }
-    #myCarousel3{
+
+    #myCarousel3 {
         width: 500px;
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
-    #myCarousel3  .owl-carousel .owl-item img{
-       width: 125px;  
+
+    #myCarousel3 .owl-carousel .owl-item img {
+        width: 125px;
     }
 }
-#myCarousel3 .owl-dots{
+
+#myCarousel3 .owl-dots {
     position: absolute;
     width: 100%;
     top: 50%;
     right: calc(-100% - 1rem);
     display: inline-block;
-  }
-@media(max-width: 992px){
-    #myCarousel3  .btn.btn-prime{
-        width: 100%; display: block;
-      }
-    #myCarousel3 .owl-dots{
+}
+
+@media(max-width: 992px) {
+    #myCarousel3 .btn.btn-prime {
+        width: 100%;
+        display: block;
+    }
+
+    #myCarousel3 .owl-dots {
         position: absolute;
         left: 40%;
         top: calc(0%);
-        transform: translate(0%,-100%);
+        transform: translate(0%, -100%);
     }
 }
 
-@media(max-width: 556px){
-    #myCarousel3 .owl-dots{
+@media(max-width: 556px) {
+    #myCarousel3 .owl-dots {
         left: 30%;
         top: calc(0%);
-        transform: translate(0%,-100%);
+        transform: translate(0%, -100%);
     }
-  
+
 }
-  #myCarousel3 .owl-carousel button.owl-dot{
+
+#myCarousel3 .owl-carousel button.owl-dot {
     height: 7px;
     width: 50px;
-    margin-right:6px; 
-    border:1px solid $ColorPrime; 
-    background-color:rgba($ColorPrime,0.4);
-  }
+    margin-right: 6px;
+    border: 1px solid $ColorPrime;
+    background-color: rgba($ColorPrime, 0.4);
+}
 
 
-  
+
 /*--------角色 結束--------*/
 
 
 /*不想長大*/
-.role-grow{
+.role-grow {
     position: absolute;
     left: 80%;
     top: -100px;
     width: 120px;
     z-index: 2;
 }
-.role-grow2{
+
+.role-grow2 {
     position: absolute;
     left: 20%;
     top: 72%;
@@ -1733,24 +1974,33 @@ img.role{
     z-index: 2;
 }
 
-.role-grow3{
+.role-grow3 {
     position: absolute;
     left: 24%;
     top: -60px;
     width: 120px;
     z-index: 2;
 }
-.role-grow4{
+
+.role-grow4 {
     position: absolute;
     left: 100%;
     top: 80px;
     width: 80px;
     z-index: 2;
 }
-.role-grow5{
+
+.role-grow5 {
     position: absolute;
     left: -20%;
     top: 50%;
     width: 80px;
     z-index: 2;
+}
+
+
+.web img {
+    border-radius: 0px !important;
+    box-shadow: 0 2px 4px rgba($ColorDarkprime, 0.2);
+
 }
