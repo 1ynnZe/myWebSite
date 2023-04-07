@@ -106,15 +106,16 @@ $(document).ready(function () {
 	})
 
 
-	$(function () {
-		var $container = $('.masonry');
+	var $container = $('.masonry');
+	if ($container.length > 0) {
 		$container.imagesLoaded(function () {
 			$container.masonry({
 				itemSelector: '.item'
 			})
 
 		});
-	});
+	}
+
 
 	if ($(window).width() < 992) {
 		$('.section.fp-section').css("height", "100%")
@@ -134,24 +135,7 @@ $(document).ready(function () {
 
 
 
-	// logo change when scroll
-	// $(window).on('scroll', function () {
-	// 	var scrollDistance = $(window).scrollTop();
-	// 	var $header = $(".js-header");
-	// 	if (scrollDistance > 80) {
-	// 		$header.addClass("header--scrolling");
-	// 	}
-	// 	else {
-	// 		$header.removeClass("header--scrolling")
-	// 	}
-	// })
 
-	// rellax initialization如果行動裝置不要視差滾動就if斷點
-	// if (screen.width > 768) {
-	// 	var rellax = new Rellax('.rellax', {
-	// 		center: true
-	// 	});
-	// }
 
 
 
