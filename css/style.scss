@@ -107,6 +107,14 @@ hr {
     margin: .5rem 0 .5rem 1rem;
 }
 
+a {
+    word-break: break-all;
+}
+
+.gy-3 [class*=col] {
+    margin-bottom: 1rem;
+}
+
 .wrapper {
     background-color: $ColorSec;
 }
@@ -317,7 +325,8 @@ hr {
 .side-nav {
     position: fixed;
     right: .5rem;
-    top: 65%;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     text-align: left;
     -webkit-writing-mode: vertical-lr;
@@ -829,8 +838,9 @@ hr {
 
     .slogan {
         position: absolute;
-        top: -16rem;
+        top: -5rem;
         letter-spacing: .25rem;
+        text-shadow: 1px 1px 0px white;
     }
 
     .slogan h2 {
@@ -962,6 +972,30 @@ hr {
 /*--------關於我 結束--------*/
 
 /*--------插圖 開始--------*/
+.il_box {
+    text-align: center;
+
+    >div {
+        border: 1px solid #fff;
+        background: rgba(255, 255, 255, .6);
+    }
+}
+
+@media (min-width: 768px) {
+    .il_box {
+        position: absolute;
+        z-index: 100;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        >div {
+            min-width: 170px;
+            max-width: 100%;
+        }
+    }
+}
+
 .owl-carousel button.owl-dot.active,
 .owl-carousel button.owl-dot {
     transition: all .3s;
@@ -989,10 +1023,12 @@ hr {
     max-width: 10px;
 }
 
-#myCarousel2 .item .imgbox {
+#myCarousel2 .item img {
     @include bdrs(50%);
     transform-origin: center;
     transform: rotate(90deg);
+
+
 }
 
 #myCarousel .owl-carousel button.owl-dot,
@@ -1004,15 +1040,12 @@ hr {
     background-color: rgba($ColorPrime, 0.4);
 }
 
-#myCarousel .owl-carousel .owl-item .imgbox {
+#myCarousel .owl-carousel .owl-item img {
     @include bdrs;
     border: .5rem solid #fff;
     width: calc(100% - 4rem - 6px);
-
-}
-
-#myCarousel .owl-carousel .owl-item .imgbox img {
-    @include bdrs;
+    height: 600px !important;
+    object-fit: cover;
 
 }
 
@@ -1028,10 +1061,9 @@ hr {
 
 #myCarousel2 .item {
     padding: 0 6px;
-    // max-width: 120px;
 }
 
-#myCarousel2 .item .imgbox {
+#myCarousel2 .item img {
     cursor: pointer;
     transform: rotate(90deg);
 }
@@ -1071,7 +1103,7 @@ hr {
         margin: 10px;
     }
 
-    #myCarousel2 .item .imgbox {
+    #myCarousel2 .item img {
         transform-origin: center;
         transform: rotate(90deg);
 
@@ -1100,32 +1132,29 @@ hr {
         z-index: 2;
     }
 
+
+    #myCarousel .carousel p {
+        display: none;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
     #myCarousel2 .owl-carousel .owl-dots {
         position: relative;
         transform: rotate(90deg);
         margin: auto 0;
     }
 
-    #myCarousel2 .owl-carousel {
-        transform: rotate(-90deg);
-        width: calc(181px * 2);
-        margin: auto;
-        margin-left: 2.5rem;
-        top: -200px;
 
+
+    #myCarousel2 .item img {
+        cursor: pointer;
+        transform: rotate(0deg);
     }
 }
 
-@media(max-width:600px) {
-    #myCarousel .owl-carousel .owl-item .imgbox {
-        width: 250px;
-        max-width: 100%;
-    }
-
-    #myCarousel .carousel p {
-        display: none;
-    }
-}
 
 /*--------插圖 結束--------*/
 
@@ -2003,4 +2032,7 @@ img.role {
     border-radius: 0px !important;
     box-shadow: 0 2px 4px rgba($ColorDarkprime, 0.2);
 
+    .masonry img {
+        border-radius: 0px !important;
+    }
 }
