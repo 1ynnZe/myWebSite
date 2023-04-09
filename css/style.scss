@@ -388,6 +388,10 @@ a {
 
 }
 
+.navbar {
+    padding: 0.5rem 0rem;
+}
+
 .navbar-logo {
     display: inline-block;
     width: 140px;
@@ -1345,6 +1349,7 @@ a {
     .design.section .tabs-left {
         display: block;
         width: 100%;
+        height: auto;
     }
 
     .tabs-left>.nav-tabs>li>a {
