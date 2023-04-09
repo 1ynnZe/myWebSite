@@ -1513,7 +1513,7 @@ a {
     background-repeat: no-repeat;
     background-size: 300px;
     background-attachment: fixed;
-    position: absolute;
+    position: fixed;
 }
 
 @media(max-width:992px) {
@@ -1521,6 +1521,11 @@ a {
         position: relative;
         height: 200px;
         width: 100%;
+    }
+
+    .about_contact_btn {
+        margin-right: auto;
+        margin-left: 5px;
     }
 }
 
@@ -1726,7 +1731,6 @@ a {
     width: 50%;
     height: 50%;
     position: absolute;
-    left: 50%;
     top: 0;
     background-color: #a7eaee;
 }
