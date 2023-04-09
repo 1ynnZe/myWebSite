@@ -1695,6 +1695,11 @@ img.role {
   font-size: 17px;
 }
 
+@media (max-width: 991.98px) {
+  .role-card::after {
+    width: 80px;
+  }
+}
 /*border*/
 .border-top {
   border-top: 16px solid #fff !important;
