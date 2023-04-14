@@ -133,23 +133,7 @@ $(document).ready(function () {
 	})
 
 
-	$("#gform").submit((e) => {
-		e.preventDefault()
-		$.ajax({
-			url: "",
-			data: $("gform").serialize(),
-			method: "post",
-			success: function (response) {
-				alert("提交成功")
-				// window.location.reload()
-				window.location.href = "http://1ynnze.github.io/myWebSite"
-			},
-			error: function (err) {
-				alert("提交失敗")
 
-			}
-		})
-	})
 
 
 
