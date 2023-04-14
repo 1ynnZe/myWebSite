@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/jquery.fullPage.css">
     <link rel="stylesheet" href="./css/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -199,7 +200,6 @@
 
             </div>
         </section>
-
     </div>
     <!-- side-nav start -->
     <ul class="side-nav">
@@ -272,11 +272,36 @@
     </div>
 
 
-    <script src="./js/jquery-3.2.1.min.js"></script>
-    <script src="./js/bootstrap.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/custom.js"></script>
+	<!-- JS -->
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script src="./js/bootstrap.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<script src="./js/jquery.fullpage.min.js"></script>
+	<script src="./js/owl-carousel/owl.carousel.min.js"></script>
+	<script src="./js/owl-carousel/owl.carousel2.3.4.min.js"></script>
+	<script src="./js/owl-carousel/owl.carousel2.3.4.min.js"></script>
+	<script src="./js/masonry/masonry_pkgd.mjs"></script>
+	<script src="./js/masonry/imagesloaded_pkgd.mjs"></script>
+	<script src="./js/jquery.fancybox.min.js"></script>
+	<script src="./js/custom.js"></script>
     <script>
+        $("#gform").submit((e) => {
+            e.preventDefault()
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbwaqexBLEedNCUW1qCKgEWqQDCSNufyurrjfTgWMXyAMxGmuaIBvjcbzOilDabNuPeYQg/exec",
+                data: $("gform").serialize(),
+                method: "post",
+                success: function (response) {
+                    alert("提交成功")
+                    window.location.reload()
+                },
+                error: function (err) {
+                    alert("提交失敗")
+
+                }
+            })
+        })
+
 
         var div1 = document.getElementById('bar-block')
         var parent = document.getElementById('parentBar')
@@ -321,23 +346,6 @@
 
         }
 
-
-        $("#gform").submit((e) => {
-            e.preventDefault()
-            $.ajax({
-                url: "",
-                data: $("gform").serialize(),
-                method: "post",
-                success: function (response) {
-                    alert("提交成功")
-                    window.location.reload()
-                },
-                error: function (err) {
-                    alert("提交失敗")
-
-                }
-            })
-        })
 
 
     </script>
