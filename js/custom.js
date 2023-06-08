@@ -9,6 +9,23 @@ $(document).ready(function () {
 		$('#overlay').css('opacity', '0').css('visibility', 'hidden')
 	})
 
+	$("#gform").submit((e) => {
+		e.preventDefault()
+		$.ajax({
+			url: "https://script.google.com/macros/s/AKfycbwaqexBLEedNCUW1qCKgEWqQDCSNufyurrjfTgWMXyAMxGmuaIBvjcbzOilDabNuPeYQg/exec",
+			data: $("gform").serialize(),
+			method: "post",
+			success: function (response) {
+				alert("提交成功")
+				window.location.reload()
+			},
+			error: function (err) {
+				alert("提交失敗")
+
+			}
+		})
+	})
+
 
 	//owl-carousel
 

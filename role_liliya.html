@@ -255,66 +255,19 @@
 
         </div>
     </div>
-    <!-- JS -->
-    <script src="./js/jquery-3.2.1.min.js"></script>
-    <script src="./js/bootstrap.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/jquery.fullpage.min.js"></script>
-    <script src="./js/owl-carousel/owl.carousel.min.js"></script>
-    <script src="./js/owl-carousel/owl.carousel2.3.4.min.js"></script>
-
-    <script src="./js/jquery.fancybox.min.js"></script>
-    
-    <script src="./js/custom.js"></script>
-    <script>
-
-        var div1 = document.getElementById('bar-block')
-        var parent = document.getElementById('parentBar')
-        var glass = document.getElementById('glass')
-        //拖曳
-        div1.onmousedown = function (ev) {
-            var oEv = ev || event//ie用event，其他瀏覽器要傳參數
-            //先求出鼠標到div1間的距離，而這距離是要一直保持不變
-            disY = oEv.clientY - div1.offsetTop
-
-            //也能用div1.onmousemove但這樣拖的快時或div太小，鼠標跑出div時就拖不動
-            document.onmousemove = function (ev) {
-                var oEv = ev || event//ie用event，其他瀏覽器要傳參數
-                var t = oEv.clientY - disY
-                //阻止拖出視窗外
-                if (t < 0) {
-                    t = 0
-                }
-                else if (t > parent.offsetHeight - div1.offsetHeight) {
-                    t = parent.clientHeight - div1.offsetHeight
-                }
-                //鼠標移動跟著動    
-                div1.style.top = t + 'px'
-                //紀錄拖曳變為比例
-                var scale = t / (parent.offsetHeight - div1.offsetHeight)
-                //所以scale就是0~1間 
-                var scaleInt = Math.round(100 * scale)
-                console.log(scaleInt)
-                glass.style.height = 100 - scaleInt + "%"
-                console.log(glass.style.height)
-                glass.classList.add('noword')
-
-            }
-
-            document.onmouseup = function () {
-                document.onmousemove = null
-                document.onmouseup = null
-                glass.classList.remove('noword')
-
-            }
-            return false//在mousedown裡阻止火狐拖曳的bug(如果div1內是空的就會有bug)
-
-        }
-
-
-
-
-
-    </script>
+	<!-- JS -->
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script src="./js/bootstrap.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<script src="./js/jquery.fullpage.min.js"></script>
+	<script src="./js/owl-carousel/owl.carousel.min.js"></script>
+	<script src="./js/owl-carousel/owl.carousel2.3.4.min.js"></script>
+	<script src="./js/owl-carousel/owl.carousel2.3.4.min.js"></script>
+	<script src="./js/masonry/masonry_pkgd.mjs"></script>
+	<script src="./js/masonry/imagesloaded_pkgd.mjs"></script>
+	<script src="./js/jquery.fancybox.min.js"></script>
+	<script src="./js/custom.js"></script>
+  
 </body>
 
 </html>
