@@ -84,7 +84,6 @@ body,
 html {
     margin: 0;
     padding: 0;
-    height: 100%;
     max-width: 100vw;
     overflow-x: hidden;
 }
@@ -1200,7 +1199,7 @@ textarea {
 
 }
 
-.masonry .item {
+.row .item {
     padding: 6px;
 }
 
