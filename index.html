@@ -786,10 +786,10 @@
 				data: {
 				},//data結束 
 				created: function () {
-					alert("new Vue.created生命週期-data資料已取得，但el還未被建立")/* data資料已取得，但el還未被建立 */
+					console.log("new Vue.created生命週期-data資料已取得，但el還未被建立")/* data資料已取得，但el還未被建立 */
 				},
 				beforeMount: function () {
-					alert("new Vue.beforeMount生命週期-還沒抓到el資料")/* 還沒抓到el資料 */
+					console.log("new Vue.beforeMount生命週期-還沒抓到el資料")/* 還沒抓到el資料 */
 				},
 				mounted: function () { //已掛上Dom 並取得el資料
 					$('.preloader').addClass('complete')
