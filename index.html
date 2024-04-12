@@ -10,16 +10,10 @@
 	<!-- bootstrap4.4.1 -->
 	<link rel="stylesheet" href="./css/bootstrap.css">
 	<link rel="stylesheet" href="./css/jquery.fullPage.css">
+	<!-- owl.carousel2.3.4 -->
 	<link rel="stylesheet" href="./css/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="./css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="./css/fonts.css">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
-
-
-
-
 	<link rel="stylesheet" href="./css/style.css">
 
 
@@ -35,7 +29,7 @@
 	<!-- loading end-->
 
 	<!-- style="display: none;" -->
-	<div class="wrapper" style="display: none;">
+	<div id="wrapper" class="wrapper" style="display: none;">
 		<!--header start-->
 		<header class="header">
 			<div class="container">
@@ -251,7 +245,7 @@
 
 						</div>
 						<div class="il_box">
-							<div class="p-2">插畫作品皆使用電腦繪圖<br>過去主要使用亦會使用PS、SAI等作畫<br>現今多改用Clip Studio Paint
+							<div class="p-2">過去主要使用 亦會使用PS、SAI等作畫<br>現今多改用Clip Studio Paint
 							</div>
 							<a href="./illustration.html" class="btn btn-prime mt-2">查看更多作品
 								<i class=" mdi mdi-chevron-right"></i>
@@ -772,14 +766,14 @@
 		</div>
 	</div>
 
-
+</div>
 	<!-- JS -->
 	<script src="./js/jquery-3.2.1.min.js"></script>
+   <!-- Vue.js v2.6.11 -->
+   <script src="./js/Vue.min.js"></script>
+
 	<script src="./js/bootstrap.js"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 	<script src="./js/jquery.fullpage.min.js"></script>
-	<script src="./js/owl-carousel/owl.carousel.min.js"></script>
-	<script src="./js/owl-carousel/owl.carousel2.3.4.min.js"></script>
 	<script src="./js/owl-carousel/owl.carousel2.3.4.min.js"></script>
 	<script src="./js/masonry/masonry_pkgd.mjs"></script>
 	<script src="./js/masonry/imagesloaded_pkgd.mjs"></script>
@@ -787,6 +781,25 @@
 	<script src="./js/custom.js"></script>
 	<script>
 		$(function () {
+			var app = new Vue({
+				el: 'wrapper',
+				data: {
+				},//data結束 
+				created: function () {
+					alert("new Vue.created生命週期-data資料已取得，但el還未被建立")/* data資料已取得，但el還未被建立 */
+				},
+				beforeMount: function () {
+					alert("new Vue.beforeMount生命週期-還沒抓到el資料")/* 還沒抓到el資料 */
+				},
+				mounted: function () { //已掛上Dom 並取得el資料
+					$('.preloader').addClass('complete')
+					$('.wrapper').css('display', 'block')
+				}
+
+			});
+
+
+
 			// fullpage plugin initialization
 			$('#fullpage').fullpage({
 				anchors: ['firstPage', 'secondPage', 'thirdPage', '4thPage', '5thPage', '6thPage'],
@@ -796,14 +809,8 @@
 				scrollingSpeed: 1200
 			});
 
-			$('.preloader').addClass('complete')
-			$('.wrapper').css('display', 'block')
-			// $(window).on('load', function () {
 
-			// 	$('.preloader').addClass('complete')
-			// 	$('.wrapper').css('display', 'block')
 
-			// })
 		})
 	</script>
 
