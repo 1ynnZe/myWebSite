@@ -135,7 +135,7 @@ a {
 }
 
 .vr-text {
-  writing-mode: vertical-lr;
+  writing-mode: vertical-rl;
 }
 
 .btn:focus,
@@ -886,19 +886,6 @@ textarea {
   background: rgba(255, 255, 255, 0.6);
 }
 
-@media (min-width: 768px) {
-  .il_box {
-    position: absolute;
-    z-index: 100;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .il_box > div {
-    min-width: 170px;
-    max-width: 100%;
-  }
-}
 .owl-carousel button.owl-dot.active,
 .owl-carousel button.owl-dot {
   transition: all 0.3s;
@@ -954,8 +941,8 @@ textarea {
 }
 
 #myCarousel .carousel p {
-  background-color: rgba(232, 232, 232, 0.8);
-  padding: 4px 0;
+  background-color: #e8e8e8;
+  padding: 10px;
   border-radius: 4px;
 }
 
@@ -969,6 +956,17 @@ textarea {
 }
 
 @media (min-width: 768px) {
+  .il_box {
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .il_box > div {
+    min-width: 170px;
+    max-width: 100%;
+  }
   #myCarousel .carousel .title {
     margin-left: calc(-5rem + 6px);
   }
