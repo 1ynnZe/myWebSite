@@ -415,7 +415,7 @@ a {
     padding-top: 16px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
     .menu-toggle {
         display: none;
     }
@@ -436,7 +436,7 @@ a {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .popup-nav {
         position: fixed;
         top: 0;
